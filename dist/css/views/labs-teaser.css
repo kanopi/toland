@@ -1,0 +1,78 @@
+/**
+ * This file is for the labs teaser view.
+ */
+.labs-teaser__item {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.labs-teaser__item-inner {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 47.99em) {
+  .labs-teaser__item-inner {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 63.99em) {
+  .labs-teaser__content {
+    width: 45%;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 64em) {
+  .labs-teaser__content {
+    width: 45%;
+    padding-right: 30px;
+  }
+}
+
+.filtered-list .labs-teaser__content h2 {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 48em) and (max-width: 63.99em) {
+  .labs-teaser__media {
+    width: 55%;
+  }
+}
+
+@media (min-width: 64em) {
+  .labs-teaser__media {
+    width: 55%;
+  }
+}
+
+.labs-teaser__media img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 73.75em) {
+  .labs-teaser__media img {
+    height: 306px;
+    object-fit: cover;
+    object-position: 25% 20%;
+  }
+}
+
+@media (min-width: 48em) {
+  .labs-teaser__text {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 47.99em) {
+  .labs-teaser__more {
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=labs-teaser.css.map */

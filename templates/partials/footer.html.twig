@@ -1,0 +1,31 @@
+{{ attach_library('ucsf_dermatology_th/footer') }}
+
+{# Partial from page.html.twig #}
+<div class="footer__container">
+  <div class="footer__wrap">
+    <div class="footer__inner">
+
+      <div class="footer__first">
+        <figure class="footer__logo">
+          <a class="footer__logo-link" href="/" title="{{ 'Home'|t }} {{ site_name }}">
+            <picture class="footer__logo-image">
+              <img class="footer-logo__img" src="/{{ directory ~ '/dist/images/footer-logo.png' }}"
+                   alt="{{ 'UCSF Department of Dermatology Footer Logo'|t }}" width="351" height="79">
+            </picture>
+          </a>
+        </figure>
+
+        <div class="footer__copyright">
+          <p>
+            &copy; {{ "now"|date('Y') }} {{ 'The University of California San Francisco | UCSF Department of Dermatology'|t }}
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer__second">
+        {{ page.footer }}
+      </div>
+    </div>
+  </div>
+</div>

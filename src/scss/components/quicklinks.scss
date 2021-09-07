@@ -1,0 +1,85 @@
+/**
+ * This file is for the quicklinks component.
+ */
+@import "../global-includes";
+
+.quicklinks {
+
+  .page-is-fullwidth & {
+    @include container(1300px);
+  }
+
+  &__wrap-inner {
+    margin-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mq($until: medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    border-radius: 4px;
+    border: solid 2px $c-gray;
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include mq($from: medium) {
+      flex-basis: 48%;
+      width: 48%;
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+
+    @include mq($from: medium) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__item-inner {
+    padding: 36px 70px 10px 30px;
+  }
+
+  &__item-title {
+    h2 {
+      padding-right: 30px;
+    }
+  }
+
+  .overline {
+    text-align: left;
+  }
+
+  a:not(.btn) {
+    position: relative;
+    display: flex;
+    color: $c-charcoal;
+    @include icon-after(arrow, 22px, 22px, $position: absolute, $right: 26px, $bottom: 50%);
+    text-decoration: none;
+    height: 100%;
+
+    p {
+      color: $c-charcoal;
+      @include rem(font-size, 15px);
+    }
+
+    #{$a-tags-hover} {
+      @include icon-after(arrow-white, 22px, 22px, $position: absolute, $right: 26px, $bottom: 50%);
+
+      *,
+      p {
+        color: $c-white;
+        text-decoration: none;
+      }
+    }
+  }
+}

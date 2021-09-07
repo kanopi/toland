@@ -1,0 +1,30 @@
+name: Toland Theme
+type: theme
+base theme: stable
+description: 'Theme for UCSF, based on Stable.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - breakpoint:breakpoint
+  - responsive_image:responsive_image
+  - easy_breadcrumb:easy_breadcrumb
+  - block_class:block_class
+
+libraries:
+  - toland/global
+
+regions:
+  universal_header: "Universal Header"
+  menu: "Main menu (header)"
+  title: "Title"
+  highlighted: "Highlighted"
+  help: "Help"
+  content: "Content"
+  sidebar_first: "Sidebar first"
+  footer: "Footer"
+  off_canvas: 'Off-canvas'
+  hidden: "Hidden"
+
+ckeditor_stylesheets:
+  - dist/css/ckeditor.css

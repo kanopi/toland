@@ -1,0 +1,97 @@
+/**
+ * This file is for the text component.
+ */
+@import "../global-includes";
+
+.text-block {
+  margin-bottom: 20px;
+
+  .page-is-fullwidth & {
+    @include container(1300px);
+  }
+
+  @include mq($from: medium) {
+    margin-bottom: 50px;
+  }
+
+  &--bg-gray {
+    background-color: $c-light-gray;
+    padding: 30px 30px 10px 30px;
+  }
+
+  &--bg-orange {
+    background-color: $c-orange;
+  }
+
+  &--bg-blue {
+    background-color: $c-navy;
+  }
+
+  &--bg-medium-blue {
+    background-color: $c-med-blue;
+  }
+
+  &--bg-orange,
+  &--bg-medium-blue,
+  &--bg-blue {
+    padding: 30px 30px 10px 30px;
+
+    * {
+      color: $c-white;
+    }
+  }
+
+  &__text {
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    figcaption {
+      @include rem(font-size, 14px);
+      padding: 2px 0 8px 30px;
+      position: relative;
+      @include rem(font-size, 14px);
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: $c-navy;
+      @include icon-after(dropdown-arrow, 18px, 18px, $position: absolute, $left: 0, $top: 2px, $rotate: 180);
+    }
+
+    .media {
+      margin-bottom: 20px;
+    }
+
+    .gray-bg {
+      background-color: $c-light-gray;
+      padding: 30px 30px 10px 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .align-left {
+    padding-right: 20px;
+    width: 50%;
+
+    @include mq($until: medium) {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .align-right {
+    padding-left: 20px;
+    width: 50%;
+
+    @include mq($until: medium) {
+      float: none;
+      width: 100%;
+    }
+  }
+}

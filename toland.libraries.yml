@@ -1,0 +1,176 @@
+global:
+  css:
+    base:
+      dist/css/global/base.css: { media: screen }
+      dist/css/global/admin-tabs.css: { media: screen }
+      dist/css/global/typography.css: { media: screen }
+      dist/css/global/lists.css: { media: screen }
+      dist/css/global/buttons-links.css: { media: screen }
+      dist/css/global/table.css: { media: screen }
+      dist/css/global/blockquote.css: { media: screen }
+      dist/css/global/utility.css: { media: screen }
+      dist/css/global/form.css: { media: screen }
+      dist/css/elements/search-header.css: { media: screen }
+    theme:
+      dist/css/layout/print.css: { media: print }
+
+  js:
+    dist/vendor/js/once-vanilla.js: { minified: true, defer: true, async: true }
+    dist/js/global.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+header:
+  css:
+    base:
+      dist/css/header/universal-header.css: { media: screen }
+      dist/css/header/header.css: { media: screen }
+
+footer:
+  css:
+    base:
+      dist/css/footer/footer.css: { media: screen }
+
+page:
+  css:
+    theme:
+      dist/css/layout/layout.css: { media: screen }
+
+menu:
+  css:
+    base:
+      dist/vendor/css/mmenu.css: { media: screen }
+      dist/css/menu/menu-off-canvas.css: { media: screen }
+      dist/css/menu/menu-widescreen.css: { media: screen }
+  js:
+    dist/vendor/js/jquery-meganav.js: { defer: true, async: true }
+    dist/vendor/js/mmenu-8.5.21.min.js: { minified: true, defer: true, async: true }
+    dist/js/menu.js: { }
+  dependencies:
+    - toland/global
+
+video_bg:
+  js:
+    dist/vendor/js/jquery.mb.YTPlayer.min.js: { minified: true, async: true, defer: true}
+    dist/js/video.js: { }
+
+cards_carousel:
+  css:
+    base:
+      dist/vendor/css/tiny-slider.css: { media: screen }
+  js:
+    dist/vendor/js/tiny-slider.js: { }
+    dist/js/cards-carousel.js: { }
+
+article:
+  css:
+    theme:
+      dist/css/node/article.css: { media: screen }
+
+columns:
+  css:
+    theme:
+      dist/css/components/columns.css: { media: screen }
+
+media:
+  css:
+    theme:
+      dist/css/components/media.css: { media: screen }
+
+scs_node:
+  css:
+    theme:
+      dist/css/node/scs-node.css: { media: screen }
+
+video_modal:
+  css:
+    theme:
+      dist/css/components/video-modal.css: { media: screen }
+  js:
+    dist/vendor/js/a11y-dialog.js: { }
+    dist/js/video-modal.js: { async: true }
+
+file_link:
+  js:
+    dist/js/file-link.js: { }
+
+news_view:
+  css:
+    theme:
+      dist/css/views/news-media.css: { media: screen }
+
+sidebar_menu:
+  js:
+    dist/js/sidebar-menu.js: { }
+  css:
+    theme:
+      dist/css/menu/sidebar-menu.css: { media: screen }
+
+scs_teaser:
+  js:
+    dist/js/scs-teaser.js: { }
+  css:
+    theme:
+      dist/css/views/scs-teaser.css: { media: screen }
+
+breadcrumbs:
+  css:
+    theme:
+      dist/css/layout/breadcrumbs.css: { media: screen }
+
+sf_person:
+  css:
+    theme:
+      dist/css/node/sf-person.css: { media: screen }
+
+pubs_teaser:
+  css:
+    theme:
+      dist/css/node/pubs-teaser.css: { media: screen }
+
+labs_teaser:
+  css:
+    theme:
+      dist/css/views/labs-teaser.css: { media: screen }
+
+c_person:
+  css:
+    theme:
+      dist/css/components/c-person.css: { media: screen }
+
+people_list:
+  css:
+    theme:
+      dist/css/components/people-list.css: { media: screen }
+
+calendar:
+  css:
+    theme:
+      dist/css/components/calendar.css: { media: screen }
+
+labs:
+  css:
+    theme:
+      dist/css/group/labs.css: { media: screen }
+
+profile_teaser:
+  css:
+    theme:
+      dist/css/views/profile-teaser.css: { media: screen }
+
+pager:
+  css:
+    theme:
+      dist/css/elements/pager.css: { media: screen }
+
+blazy:
+  js:
+    dist/js/blazy.js: { }
+    //cdn.jsdelivr.net/npm/blazy@1.8.2/blazy.min.js: { type: external, preprocess: false, minified: true }
+
+search_results:
+  css:
+    theme:
+      dist/css/elements/search-results.css: { }

@@ -1,0 +1,30 @@
+@import "../global-includes";
+
+blockquote {
+  background-color: $c-med-blue;
+  padding: 26px 60px 20px 30px;
+  margin: 0;
+  color: $c-white;
+
+  p {
+
+    .l-content & {
+      font-family: $font-garamond-regular;
+      @include rem(font-size, 24px);
+      line-height: 1.5;
+    }
+
+    .text-block__text & {
+      @include rem(font-size, 24px);
+    }
+
+    &.bq-attribution {
+      font-family: $font-helvetica-neue-regular;
+      @include rem(font-size, 16px);
+      letter-spacing: 0.4px;
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+  }
+}

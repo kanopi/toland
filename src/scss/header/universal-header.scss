@@ -1,0 +1,52 @@
+@import "../global-includes";
+
+.universal-header {
+  background-color: $c-navy;
+
+  &__region {
+    @include container(1360px);
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+
+    @include mq($from: medium) {
+      align-items: center;
+    }
+  }
+
+  &__links {
+
+    @include mq($from: medium) {
+      width: 60%;
+    }
+  }
+
+  &__link-list {
+    @include list-reset();
+    display: flex;
+
+    @include mq($from: medium) {
+      justify-content: flex-end;
+    }
+
+    @include mq($until: medium) {
+      display: none;
+    }
+  }
+
+  &__link-item {
+    padding-left: 14px;
+  }
+
+  a {
+    color: $c-white;
+    @include rem(font-size, 14px);
+    text-decoration: none;
+
+    #{$a-tags-hover} {
+      text-decoration: underline;
+    }
+  }
+}
+

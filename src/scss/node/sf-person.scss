@@ -1,0 +1,237 @@
+/**
+ * This file is for node type SF person theming.
+ */
+@import "../global-includes";
+
+.sf-person {
+
+  &__column-wrap {
+
+    @include mq($from: large) {
+      display: flex;
+    }
+  }
+
+  &__column {
+    background-color: $c-white;
+    margin-bottom: 40px;
+
+    &--first {
+      margin-right: 20px;
+      padding: 0 30px 40px 0;
+
+      @include mq($from: large) {
+        width: 62%;
+      }
+    }
+
+    &--second {
+      padding: 0 24px 40px 10px;
+
+      @include mq($from: large) {
+        width: 35%;
+      }
+    }
+  }
+
+  a.link {
+    @include rem(font-size, 17px);
+    line-height: 1.47;
+    letter-spacing: 0.43px;
+    display: block;
+    color: $c-charcoal;
+  }
+
+  &__lab {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  &__header {
+
+    @include mq($from: medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    @include rem(font-size, 38px);
+    margin-bottom: 12px;
+  }
+
+  &__sub-title {
+
+    h2 {
+      @include rem(font-size, 24px);
+      line-height: 1.42;
+      letter-spacing: normal;
+
+      @include mq($from: large) {
+        max-width: 95%;
+      }
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+
+    @include mq($until: medium) {
+      margin-bottom: 20px;
+    }
+
+    @include mq($from: medium) {
+      max-width: 24%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title-wrap {
+
+    @include mq($from: medium) {
+      max-width: 76%;
+    }
+  }
+
+  &__creds {
+    @include rem(font-size, 22px);
+    line-height: 1.45;
+    letter-spacing: 0.55px;
+    color: $c-black;
+    font-family: $font-garamond-regular;
+  }
+
+  &__contact-info-wrap {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    background-color: $c-light-gray;
+    padding: 20px;
+  }
+
+  &__contact-heading {
+    border-bottom: 1px solid $c-gray;
+    margin-bottom: 10px;
+
+    > h2 {
+      @include rem(font-size, 24px);
+      line-height: 1.42;
+    }
+  }
+
+  &__contact-item {
+    margin-bottom: 10px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    a {
+      @include rem(font-size, 15px);
+      letter-spacing: 0.38px;
+
+      #{$a-tags-hover} {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__contact-url {
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 7px;
+      padding-left: 40px;
+      position: relative;
+      @include icon-before(icon_website, 23px, 23px, $position: absolute, $top: 5px, $left: 5px);
+    }
+  }
+
+  a.sf-person__contact-url-link {
+    text-decoration: none;
+    @include rem(font-size, 16px);
+  }
+
+  &__address {
+    margin-top: 12px;
+    margin-bottom: 22px;
+    position: relative;
+    @include icon-before(icon_location, 30px, 30px, $position: absolute, $top: 0, $left: 4px);
+
+    p {
+      padding-left: 44px;
+      margin-bottom: 0;
+
+      span {
+        @include rem(font-size, 16px);
+        letter-spacing: 0.38px;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  a.link--email {
+    word-break: break-all;
+    @include rem(font-size, 16px);
+  }
+
+  &__bio {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include rem(font-size, 14px);
+
+    @include mq($from: medium) {
+      margin-bottom: 70px;
+      margin-top: 30px;
+    }
+  }
+
+  &__pubs {
+
+    .btn {
+      padding: 6px 52px;
+      margin-top: 10px;
+    }
+  }
+
+  .c-accordion__item-content {
+    @include rem(font-size, 14px);
+    margin-bottom: 24px;
+
+    span {
+      padding: 0 2px;
+    }
+
+    span.education-degree {
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    span.education-organization {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    span.research-date {
+      display: block;
+      margin-top: 14px;
+      padding-left: 0;
+      font-weight: 600;
+    }
+  }
+}

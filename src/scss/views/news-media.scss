@@ -1,0 +1,138 @@
+/**
+ * This file is for the news views.
+ */
+@import "../global-includes";
+
+.news-media {
+
+  &__item {
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+    background-color: $c-white;
+    box-shadow: 0 12px 24px 0 rgba(192, 192, 192, 0.2);
+  }
+
+  &__title {
+
+    > h2 {
+      @include rem(font-size, 24px);
+      text-align: left;
+      line-height: 1.42;
+      color: $c-black;
+
+      .filtered-list & {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      > a:not(.btn) {
+        color: $c-black;
+        text-decoration: none;
+        text-align: left;
+        padding: 0;
+
+        #{$a-tags-hover} {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__text {
+
+    @include mq($until: medium) {
+      padding-bottom: 30px;
+    }
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__wrap-inner {
+    display: flex;
+
+    @include mq($until: medium) {
+      flex-direction: column-reverse;
+      padding: 0 20px;
+    }
+  }
+
+  &__image-wrap {
+    width: 100%;
+
+    @include mq($from: medium, $until: large) {
+      width: 27%;
+    }
+
+    @include mq($from: large, $until: large_plus) {
+      width: 25%;
+    }
+
+    @include mq($from: large_plus) {
+      width: 22%;
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    @include mq($from: medium, $until: large) {
+      width: 73%;
+    }
+
+    @include mq($from: large, $until: large_plus) {
+      width: 75%;
+    }
+
+    @include mq($from: large_plus) {
+      width: 68%;
+    }
+  }
+
+  &__image {
+
+    @include mq($from: medium) {
+      margin-right: 30px;
+      padding: 18px 0 0 18px;
+    }
+
+    img {
+      width: 227px;
+      height: 146px;
+      object-fit: cover;
+
+      @include mq($until: large) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__byline {
+    @include rem(font-size, 15px);
+    line-height: 1.8;
+    letter-spacing: 0.38px;
+    color: $c-med-blue;
+    margin-bottom: 10px;
+    padding: 20px 0 0 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: $c-med-blue;
+      margin-right: 6px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &__byline-divider {
+    color: $c-divider;
+    @include rem(font-size, 10px);
+  }
+}

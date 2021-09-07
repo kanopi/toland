@@ -1,0 +1,58 @@
+@import "../global-includes";
+
+.main.l-content {
+  @include container(1300px);
+
+  .page-node-type-article & {
+    @include container(1000px);
+  }
+
+  .page-is-fullwidth & {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-utility & {
+    p {
+      @include rem(font-size, 18px);
+    }
+  }
+}
+
+.help {
+  @include container(1300px);
+}
+
+// Sidebar layout.
+.page-content-wrap.has-sidebar {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq($from: medium_plus) {
+    flex-direction: row-reverse;
+  }
+
+  .sidebar-first {
+    width: 100%;
+
+    @include mq($from: medium_plus) {
+      width: 30%;
+      padding-right: 30px;
+    }
+  }
+
+  .page-content {
+    width: 100%;
+
+    @include mq($from: medium_plus) {
+      width: 70%;
+      padding-left: 44px;
+    }
+  }
+}
+
+.print-logo {
+  display: none !important;
+}

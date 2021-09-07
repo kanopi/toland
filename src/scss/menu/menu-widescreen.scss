@@ -1,0 +1,303 @@
+/**
+ * This file is for the main menu (widescreen) component.
+ */
+@import "../global-includes";
+
+.main-menu {
+  padding-top: 20px;
+
+  @include mq($until: large) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: $c-navy;
+    text-decoration: none;
+    position: relative;
+
+    #{$a-tags-hover} {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-list {
+
+    &--level-0 {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    &--level-1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    &--level-2 {
+      position: absolute;
+      padding: 20px 0 0 40px;
+      margin-left: 20px;
+      left: 150px;
+      top: 0;
+      display: none;
+
+      &.content-panel-is-closed {
+        display: none;
+      }
+
+      &.content-panel-is-open {
+        //display: flex;
+        //flex-wrap: wrap;
+        //z-index: 1000;
+
+        display: block;
+
+        z-index: 1000;
+        height: 100%;
+      }
+    }
+  }
+
+  &__item {
+
+    &--mega {
+
+      .main-menu__subnav-link--level-1 {
+        width: 170px;
+      }
+
+      .main-menu__nav-sub-nav-container {
+        background-image: url('#{$path-to-images}/v-line.svg');
+        background-repeat: repeat-y;
+        background-position: 170px 0;
+      }
+    }
+
+    &--dropmenu {
+
+      .main-menu__nav-sub-nav-container {
+        padding: 0 0 14px 0;
+      }
+
+      .main-menu__subnav-link--level-1 {
+        width: 100%;
+      }
+    }
+
+    &--level-0 {
+
+      > a {
+        @include rem(font-size, 15px);
+        padding: 12px 18px 20px 18px;
+        top: 1px;
+        z-index: 1000;
+        border: 1px solid transparent;
+        border-bottom: 0;
+
+        @include mq($from: large, $until: wide) {
+          padding: 12px 8px 20px 8px;
+        }
+
+        &.mega {
+
+          + .main-menu__sub-nav {
+            right: 0;
+            left: 0;
+            z-index: 1002;
+          }
+        }
+
+        &.mega--short {
+          + .main-menu__sub-nav {
+            > div {
+              min-height: 260px;
+            }
+          }
+        }
+
+        &.mega--medium {
+          + .main-menu__sub-nav {
+            > div {
+              min-height: 340px;
+            }
+          }
+        }
+
+        &.mega--tall {
+          + .main-menu__sub-nav {
+            > div {
+              min-height: 480px;
+            }
+          }
+        }
+
+        &.panel-is-open {
+          border: 1px solid $c-border;
+          border-bottom: 0;
+          background-color: $c-white;
+          outline: none;
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+        }
+
+        &.btn {
+          border: 2px solid $c-orange;
+          color: $c-white;
+          margin-left: 6px;
+
+          #{$a-tags-hover} {
+            color: $c-navy;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &:first-child {
+        > a {
+          padding-left: 10px;
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        > a {
+          margin-right: 0;
+        }
+      }
+
+      &.is-dropmenu {
+        .main-menu__item-list--level-3,
+        .main-menu__item-list--level-2,
+        .main-menu__item--submenu-level-1 > a:after {
+          display: none;
+        }
+      }
+    }
+
+    &--submenu-level-0 {
+      > a {
+        @include icon-after(dropdown-arrow, 11px, 11px, $top: 2px, $position: relative, $margin: 0 0 0 10px, $z_index: 100000);
+
+        &.panel-is-open {
+          @include icon-after(dropdown-arrow, 11px, 11px, $top: -2px, $position: relative, $margin: 0 0 0 10px, $rotate: 180);
+        }
+      }
+
+      &.is-dropmenu {
+        position: relative;
+      }
+    }
+
+    &--level-1 {
+
+      > a {
+        @include rem(font-size, 14px);
+        padding: 4px 34px 5px 14px;
+        display: inline-block;
+        line-height: 1.4;
+        color: $c-med-blue;
+
+        #{$a-tags-hover} {
+          background-color: $c-orange;
+          color: $c-white;
+          text-decoration: none;
+        }
+
+        &.has-focus + ul {
+          display: block;
+        }
+      }
+    }
+
+    &--submenu-level-1 {
+
+      > a {
+        position: relative;
+        @include icon-after(dropdown-arrow, 11px, 11px, $top: 9px, $position: absolute, $margin: 0 0 0 20px, $right: 10px, $rotate: 270);
+
+        #{$a-tags-hover} {
+          @include icon-after(dropdown-arrow-white, 11px, 11px, $top: 9px, $position: absolute, $margin: 0 0 0 20px, $right: 10px, $rotate: 270);
+        }
+      }
+
+      &.link-expanded {
+
+        > a {
+          background-color: $c-orange;
+          color: $c-white;
+          text-decoration: none;
+          @include icon-after(dropdown-arrow-white, 11px, 11px, $top: 9px, $position: absolute, $margin: 0 0 0 20px, $right: 10px, $rotate: 270);
+        }
+      }
+    }
+
+    &--level-2 {
+      width: 48%;
+      display: inline-block;
+
+      > span,
+      > a {
+        @include rem(font-size, 14px);
+        color: $c-med-blue;
+      }
+    }
+  }
+
+  &__sub-nav {
+    @include mq($from: large) {
+      position: absolute;
+      top: 100%;
+      background-color: $c-white;
+      color: $c-navy;
+      width: 100%;
+      z-index: 320;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+
+      &.l-content {
+        margin-top: 0;
+      }
+
+      // Debug submenu (uncomment below).
+      // visibility: visible !important;
+      // opacity: 1 !important;
+    }
+
+    &.panel-is-open {
+      visibility: visible;
+      opacity: 1;
+      height: inherit;
+      @include fade-effect();
+    }
+
+    // No animation for IE11.
+    @include ie11 {
+      @include no-animation();
+    }
+
+    .container {
+      @include mq($from: large) {
+        @include container(1320px);
+        padding: 44px 20px 30px 20px;
+      }
+    }
+  }
+
+  &__nav-sub-nav-container {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+    border: 1px solid $c-border;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 16px 16px 16px 0;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+  }
+}

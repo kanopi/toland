@@ -1,0 +1,27 @@
+blockquote {
+  background-color: #485e7f;
+  padding: 26px 60px 20px 30px;
+  margin: 0;
+  color: #fff;
+}
+
+.l-content blockquote p {
+  font-family: "EB Garamond", Garamond, serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.text-block__text blockquote p {
+  font-size: 1.5rem;
+}
+
+blockquote p.bq-attribution {
+  font-family: "HelveticaNeueLTW04-55Roman", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/*# sourceMappingURL=blockquote.css.map */

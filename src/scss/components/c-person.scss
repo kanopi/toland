@@ -1,0 +1,188 @@
+/*
+Person component styling.
+ */
+@import "../global-includes";
+
+.c-person {
+  margin-bottom: 20px;
+  background-color: $c-light-gray;
+
+  &--is-freestanding-person {
+    padding: 20px;
+  }
+
+  .people-list--is-main-content & {
+    width: 100%;
+
+    @include mq($from: large) {
+      width: 49%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include mq($until: narrow_plus) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .people-list--is-sidebar & {
+      @include mq($from: medium_plus, $until: large) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .people-list--is-main-content & {
+      padding: 20px;
+      background-color: $c-light-gray;
+    }
+  }
+
+  &__link-wrap {
+    display: flex;
+
+    @include mq($from: medium_plus, $until: larger) {
+      flex-direction: column;
+    }
+
+    @include mq($until: narrow_plus) {
+      flex-direction: column;
+    }
+
+    > div:first-child {
+      &:after {
+        content: ' | ';
+        display: inline-block;
+        width: 10px;
+        height: 8px;
+        color: $c-border-heading;
+
+        @include mq($from: medium_plus, $until: larger) {
+          display: none;
+        }
+
+        @include mq($until: narrow_plus) {
+          display: none;
+        }
+      }
+    }
+
+    > div:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__media {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+
+    .people-list--is-sidebar & {
+      @include mq($from: medium_plus, $until: large) {
+        margin-bottom: 10px;
+      }
+
+      @include mq($until: narrow_plus) {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .people-list--is-main-content & {
+      width: 90px;
+      height: 90px;
+
+      @include mq($until: narrow_plus) {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @include root-modifier('.c-person--is-freestanding-person') {
+      width: 110px;
+      height: 110px;
+
+      @include mq($until: narrow_plus) {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__name {
+    h2 {
+      font-family: $font-helvetica-neue-medium;
+      line-height: 1.4;
+      letter-spacing: 0.38px;
+      color: $c-charcoal;
+      @include rem(font-size, 15px);
+      margin-bottom: 6px;
+    }
+  }
+
+  &__title {
+    @include rem(font-size, 15px);
+    font-style: italic;
+    line-height: 1.8;
+    letter-spacing: 0.38px;
+    color: $c-charcoal;
+    margin-bottom: 8px;
+
+    .people-list--is-sidebar & {
+      margin-bottom: 0;
+    }
+  }
+
+  .has-link {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__contact-wrap {
+    margin-bottom: 6px;
+  }
+
+  p.address {
+    margin-bottom: 6px;
+  }
+
+  &__telephone {
+    &.has-link {
+      @include rem(font-size, 14px);
+
+      a {
+        color: $c-charcoal;
+        @include rem(font-size, 14px);
+        line-height: 1.86;
+      }
+    }
+  }
+
+  &__fax {
+    &.has-link {
+      @include rem(font-size, 14px);
+
+      a {
+        color: $c-charcoal;
+        @include rem(font-size, 14px);
+        line-height: 1.86;
+      }
+    }
+  }
+}

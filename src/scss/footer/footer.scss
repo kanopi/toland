@@ -1,0 +1,60 @@
+@import "../global-includes";
+
+.footer {
+  background-color: $c-navy;
+  color: $c-white;
+  margin-top: 30px;
+  clear: both;
+
+  &__wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include container(1360px);
+
+    @include mq($from: large) {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    border-top: 1px solid $c-navy;
+    padding-top: 12px;
+
+    @include mq($from: large) {
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__copyright {
+    p {
+      @include rem(font-size, 14px);
+    }
+  }
+
+  &__logo {
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    @include mq($from: large) {
+      margin-bottom: 40px;
+    }
+
+    img {
+      @include mq($until: medium) {
+        max-width: 200px;
+        height: auto;
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  &__cta-button {
+    margin-right: 6px;
+  }
+}

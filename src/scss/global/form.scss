@@ -1,0 +1,339 @@
+@import "../global-includes";
+
+// Inputs.
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='color'],
+input[type='text'] {
+  width: 100%;
+  height: 50px;
+  line-height: 1.67;
+  @include rem(font-size, 18px);
+  padding: 0 0 0 20px;
+  border-radius: 0;
+  border: 1px solid $c-navy;
+  color: $c-navy;
+}
+
+::-webkit-input-placeholder {
+  color: $c-navy;
+}
+
+:-ms-input-placeholder {
+  color: $c-navy;
+}
+
+::placeholder {
+  color: $c-navy;
+}
+
+button,
+input[type=button] {
+  border: 0;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+
+label {
+  @include rem(font-size, 16px);
+  @include rem(line-height, 22px);
+  padding-bottom: 6px;
+  display: block;
+  font-weight: 600;
+  color: $c-navy;
+  letter-spacing: 1px;
+}
+
+details {
+  margin-bottom: 20px;
+}
+
+summary {
+  margin-bottom: 20px;
+}
+
+form {
+  .description {
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: $c-navy;
+}
+
+.js-form-type-select {
+  position: relative;
+  @include icon-before(dropdown-arrow, 22px, 22px, $position: absolute, $top: 20px, $right: 20px);
+
+  &:before {
+    z-index: 1000;
+  }
+
+  &.has-label {
+    &:before {
+      top: 50px;
+    }
+  }
+
+  select {
+    @include rem(font-size, 18px);
+    padding: 0 0 0 20px;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    appearance: none;
+    border-radius: 0;
+    position: relative;
+    cursor: pointer;
+    background-image: none;
+    height: 50px;
+    border: 1px solid $c-navy;
+    width: 100%;
+    color: $c-navy;
+
+    details & {
+      width: 98%;
+    }
+
+    .filter-sort & {
+      padding: 2px 4px 2px 10px;
+    }
+  }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/////// Checkbox //////////////
+.js-form-type-checkbox,
+.form-type-checkbox {
+  &.form-item {
+    @include rem(margin, 0 0 10px 0);
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    @include visually-hidden();
+
+    // Hide the checkmark by default.
+    + label {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:checked {
+      + label {
+        font-weight: 400;
+
+        &::after {
+          content: "";
+        }
+
+        // Unhide on the checked state.
+        &::before {
+          content: "";
+          background-color: transparent;
+          border: 3px solid $c-med-blue;
+          color: $c-med-blue;
+        }
+      }
+    }
+
+    &:focus {
+      + label {
+        // Add focus styles on the outer-box of the faux checkbox
+        &::before {
+          background-color: transparent;
+          color: $c-med-blue;
+          border: 3px solid $c-med-blue;
+        }
+      }
+    }
+  }
+
+  label:not(.error) {
+    position: relative;
+    display: inline-block;
+    padding-left: 32px;
+    font-weight: 400;
+    margin-right: 16px;
+    padding-top: 4px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      // Needed for the line-height to take effect*/
+      display: inline-block;
+    }
+
+    // Outer box of the faux checkbox*/
+    &::before {
+      height: 22px;
+      width: 22px;
+      border: 3px solid $c-black;
+      left: -2px;
+      top: 3px;
+      border-radius: 2px;
+      padding: 10px;
+    }
+
+    // Faux checkmark.
+    &::after {
+      height: 8px;
+      width: 14px;
+      border-left: 3px solid;
+      border-bottom: 3px solid;
+      transform: rotate(-51deg);
+      left: 4px;
+      top: 10px;
+      color: $c-med-blue;
+      font-weight: 700;
+    }
+  }
+}
+
+/////// Radio //////////////
+.js-form-type-radio,
+.form-type-radio {
+
+  &.form-item {
+    @include rem(margin, 0 0 10px 0);
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    @include visually-hidden();
+
+    // Hide the checkmark by default.
+    + label {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:checked {
+      + label {
+        font-weight: 400;
+
+        &::after {
+          content: "";
+        }
+
+        // Unhide on the checked state.
+        &::before {
+          content: "";
+          background-color: transparent;
+          border: 3px solid $c-med-blue;
+          color: $c-med-blue;
+        }
+      }
+    }
+
+    &:focus {
+      + label {
+        // Add focus styles on the outer-box of the faux checkbox
+        &::before {
+          background-color: transparent;
+          border: 3px solid $c-med-blue;
+          color: $c-med-blue;
+        }
+      }
+    }
+  }
+
+  label:not(.error) {
+    position: relative;
+    display: inline-block;
+    padding-left: 32px;
+    font-weight: 400;
+    margin-right: 16px;
+    padding-top: 4px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+    }
+
+    // Outer box of the faux checkbox*/
+    &::before {
+      height: 22px;
+      width: 22px;
+      border: 3px solid $c-black;
+      left: 0;
+      top: 3px;
+      border-radius: 30px;
+    }
+
+    // Faux checkmark.
+    &::after {
+      background-color: $c-med-blue;
+      height: 8px;
+      width: 8px;
+      left: 7px;
+      border-radius: 20px;
+      top: 10px;
+    }
+  }
+}
+
+.profile-teaser .js-form-type-radio label:not(.error) {
+  margin-right: 10px;
+}
+
+textarea {
+  @include rem(font-size, 18px);
+  width: 100%;
+  color: $c-navy;
+  line-height: 1.67;
+  padding: 6px 20px;
+  border-radius: 0;
+  border: 1px solid $c-navy;
+  min-height: 100px;
+}
+

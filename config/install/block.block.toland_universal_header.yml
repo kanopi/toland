@@ -1,0 +1,28 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.toland_universal_header
+  module:
+    - block_class
+    - system
+  theme:
+    - toland
+third_party_settings:
+  block_class:
+    classes: universal-header__links
+id: toland_universal_header
+theme: toland
+region: menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:toland_universal_header'
+settings:
+  id: 'system_menu_block:toland_universal_header'
+  label: 'Universal Header'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

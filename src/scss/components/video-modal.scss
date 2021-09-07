@@ -1,0 +1,108 @@
+/**
+ * This file is for the video modal component.
+ */
+@import "../global-includes";
+
+/* -------------------------------------------------------------------------- *\
+ * Necessary styling for the dialog to work
+ * -------------------------------------------------------------------------- */
+
+/**
+ * When `<dialog>` is properly supported, the overlay is implied and can be
+ * styled with `::backdrop`, which means the DOM one should be removed.
+ */
+[data-a11y-dialog-native] .dialog-overlay {
+  display: none;
+}
+
+/**
+ * When `<dialog>` is not supported, its default display is `inline` which can
+ * cause layout issues.
+ */
+dialog[open] {
+  display: block;
+}
+
+.dialog[aria-hidden='true'] {
+  display: none;
+}
+
+/* -------------------------------------------------------------------------- *\
+ * Styling to make the dialog look like a dialog
+ * -------------------------------------------------------------------------- */
+
+.dialog:not([data-a11y-dialog-native]),
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.dialog {
+  display: flex;
+}
+
+.dialog-overlay {
+  background-color: rgba(43, 46, 56, 0.9);
+  animation: fade-in 200ms both;
+}
+
+dialog::backdrop {
+  background-color: rgba(43, 46, 56, 0.9);
+}
+
+.dialog-content {
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  z-index: 2;
+  position: relative;
+  animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+  padding: 20px;
+  max-width: 90%;
+  width: 70%;
+  border-radius: 2px;
+
+  @include mq($from: medium) {
+    padding: 30px;
+  }
+}
+
+dialog.dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  animation: fade-in 400ms 200ms both;
+}
+
+/* -------------------------------------------------------------------------- *\
+ * Extra dialog styling to make it shiny
+ * -------------------------------------------------------------------------- */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(10%);
+  }
+}
+
+.dialog-close {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.15s;
+  @include icon-after(expand-icon, 30px, 30px, $position: absolute, $top: 50%, $rotate: 45);
+}

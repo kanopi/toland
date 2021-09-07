@@ -1,0 +1,185 @@
+@import "../global-includes";
+
+/*
+Buttons and links.
+ */
+
+// ******** Buttons ************
+.btn,
+a.btn,
+// Default button ($c-orange).
+input[type="file"],
+input[type="submit"] {
+  font-family: $font-helvetica-neue-medium;
+  @include rem(font-size, 15px);
+  @include link-effect();
+  display: inline-block;
+  border-radius: 28px;
+  padding: 6px 42px;
+  line-height: 1.8;
+  color: $c-white;
+  border: 2px solid $c-orange;
+  background-color: $c-orange;
+  text-align: center;
+  cursor: pointer;
+  // Resets for various devices.
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+
+  #{$a-tags-hover} {
+    text-decoration: none;
+    border: 2px solid $c-orange;
+    color: $c-black;
+    background-color: transparent;
+  }
+
+  &.btn-small {
+    padding: 2px 16px;
+    border-radius: 17px;
+  }
+
+  &.btn-inverse {
+    #{$a-tags-hover} {
+      color: $c-white;
+    }
+  }
+
+  &.btn-hollow {
+    background-color: transparent;
+    color: $c-orange;
+    border: 2px solid $c-gray;
+
+    #{$a-tags-hover} {
+      color: $c-white;
+      border: 2px solid $c-orange;
+      background-color: $c-orange;
+    }
+  }
+}
+
+// file upload.
+.form-item.form-type-managed-file {
+  position: relative;
+
+  input[type="file"] {
+    visibility: hidden;
+  }
+
+  label {
+    @extend .btn;
+  }
+}
+
+// ******** Links ************
+.cke_editable,
+.l-content {
+  a:not(.btn) {
+    color: $c-orange;
+    @include link-effect();
+    text-decoration: underline;
+    padding: 3px;
+
+    #{$a-tags-hover} {
+      text-decoration: none;
+      background-color: $c-med-blue;
+      color: $c-white;
+    }
+  }
+}
+
+a.link {
+  @include rem(font-size, 17px);
+  line-height: 1.47;
+  letter-spacing: 0.43px;
+  position: relative;
+
+  .cke_editable &,
+  .l-content & {
+    text-decoration: none;
+  }
+
+  #{$a-tags-hover} {
+    .cke_editable &,
+    .l-content & {
+      background-color: transparent;
+      text-decoration: underline;
+      color: $c-orange;
+    }
+  }
+
+  &--telephone {
+    @include icon-before(phone-icon, 29px, 29px, $margin: 0 8px 0 0, $position: relative, $top: 8px);
+  }
+
+  &--email {
+    @include icon-before(mail-icon, 24px, 24px, $margin: 0 12px 0 0, $position: relative, $top: 10px, $left: 2px);
+  }
+
+  &--video {
+    @include icon-before(video-icon, 18px, 18px, $margin: 0 18px 0 0, $position: relative, $top: 4px);
+  }
+
+  &--download {
+    @include icon-before(download-icon, 23px, 23px, $margin: 0 14px 0 0, $position: relative, $top: 2px);
+  }
+
+  &--website {
+    @include icon-before(icon_website, 23px, 26px, $margin: 0 18px 0 0, $position: relative, $top: 6px);
+  }
+}
+
+a.link-bg {
+  @include rem(font-size, 15px);
+  display: inline-block;
+  line-height: 1.8;
+  letter-spacing: 0.38px;
+  background-color: $c-light-gray;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+
+  p & {
+    margin-bottom: 0;
+  }
+
+  &:after {
+    transform: translate(0, -50%);
+  }
+
+  .cke_editable &,
+  .l-content & {
+    padding: 20px 64px 17px 25px;
+    text-decoration: none;
+    color: $c-charcoal;
+
+    @include mq($until: narrow_plus) {
+      padding: 20px 60px 17px 20px;
+    }
+  }
+
+  &--video {
+    @include icon-after(video-icon, 18px, 20px, $margin: 0 0 0 10px, $position: absolute, $top: 50%, $right: 20px);
+
+    #{$a-tags-hover} {
+      @include icon-after(video-icon-white, 18px, 20px, $margin: 0 0 0 10px, $position: absolute, $top: 50%, $right: 20px);
+    }
+  }
+
+  &--download {
+    @include icon-after(download-icon, 23px, 23px, $margin: 0 0 0 10px, $position: absolute, $top: 50%, $right: 20px);
+
+    #{$a-tags-hover} {
+      @include icon-after(download-icon-white, 23px, 23px, $margin: 0 0 0 10px, $position: absolute, $top: 50%, $right: 20px);
+    }
+  }
+}

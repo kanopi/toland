@@ -1,0 +1,188 @@
+/**
+ * This file is for the conditions, surgery, and services views.
+ */
+.scs-teaser .views-exposed-form {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.scs-teaser a:not(.btn) {
+  text-decoration: none;
+  color: #737373;
+}
+
+.scs-teaser a:not(.btn):active h2,
+.scs-teaser a:not(.btn):focus h2,
+.scs-teaser a:not(.btn):hover h2 {
+  color: #fff;
+}
+
+.scs-teaser a:not(.btn):active .btn,
+.scs-teaser a:not(.btn):focus .btn,
+.scs-teaser a:not(.btn):hover .btn {
+  background-color: #cd4c00;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.scs-teaser h2 {
+  text-align: left;
+}
+
+.scs-teaser a.scs-teaser__item-inner {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media (max-width: 63.99em) {
+  .scs-teaser a.scs-teaser__item-inner {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 64em) {
+  .scs-teaser a.scs-teaser__item-inner {
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 63.99em) {
+  .scs-teaser__media {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 64em) {
+  .scs-teaser__media {
+    width: 19%;
+  }
+}
+
+@media (min-width: 73.75em) {
+  .scs-teaser__media {
+    width: 17%;
+  }
+}
+
+.scs-teaser__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (min-width: 64em) {
+  .scs-teaser__media img {
+    width: 185px;
+    height: 142px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 64em) and (max-width: 73.74em) {
+  .scs-teaser__content {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 64em) {
+  .scs-teaser__content {
+    width: 58%;
+  }
+}
+
+@media (min-width: 73.75em) {
+  .scs-teaser__content {
+    width: 60%;
+  }
+}
+
+@media (min-width: 64em) {
+  .scs-teaser__button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 18%;
+  }
+}
+
+@media (min-width: 73.75em) {
+  .scs-teaser__button {
+    width: 19%;
+  }
+}
+
+.scs-teaser__text p {
+  font-size: 0.9375rem;
+  font-family: "HelveticaNeueLTW04-65Medium", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.38px;
+}
+
+.scs-glossary {
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+@media (max-width: 63.99em) {
+  .scs-glossary {
+    background-color: #072049;
+    padding: 2px 20px;
+    margin-top: 20px;
+  }
+}
+
+.scs-glossary__list {
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 63.99em) {
+  .scs-glossary__list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 64em) {
+  .scs-glossary__list {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 63.99em) {
+  .scs-glossary__item {
+    width: 30px;
+  }
+}
+
+.scs-glossary__item a:not(.btn) {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.38px;
+  color: #4f4f4f;
+  text-decoration: none;
+}
+
+@media (max-width: 63.99em) {
+  .scs-glossary__item a:not(.btn) {
+    color: #fff;
+  }
+}
+
+/*# sourceMappingURL=scs-teaser.css.map */

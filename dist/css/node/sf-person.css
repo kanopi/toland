@@ -1,0 +1,263 @@
+/**
+ * This file is for node type SF person theming.
+ */
+@media (min-width: 64em) {
+  .sf-person__column-wrap {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.sf-person__column {
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+.sf-person__column--first {
+  margin-right: 20px;
+  padding: 0 30px 40px 0;
+}
+
+@media (min-width: 64em) {
+  .sf-person__column--first {
+    width: 62%;
+  }
+}
+
+.sf-person__column--second {
+  padding: 0 24px 40px 10px;
+}
+
+@media (min-width: 64em) {
+  .sf-person__column--second {
+    width: 35%;
+  }
+}
+
+.sf-person a.link {
+  font-size: 1.0625rem;
+  line-height: 1.47;
+  letter-spacing: 0.43px;
+  display: block;
+  color: #4f4f4f;
+}
+
+.sf-person__lab {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+@media (min-width: 48em) {
+  .sf-person__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.sf-person h1 {
+  font-size: 2.375rem;
+  margin-bottom: 12px;
+}
+
+.sf-person__sub-title h2 {
+  font-size: 1.5rem;
+  line-height: 1.42;
+  letter-spacing: normal;
+}
+
+@media (min-width: 64em) {
+  .sf-person__sub-title h2 {
+    max-width: 95%;
+  }
+}
+
+.sf-person__avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+@media (max-width: 47.99em) {
+  .sf-person__avatar {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 48em) {
+  .sf-person__avatar {
+    max-width: 24%;
+  }
+}
+
+.sf-person__avatar img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 48em) {
+  .sf-person__title-wrap {
+    max-width: 76%;
+  }
+}
+
+.sf-person__creds {
+  font-size: 1.375rem;
+  line-height: 1.45;
+  letter-spacing: 0.55px;
+  color: #070707;
+  font-family: "EB Garamond", Garamond, serif;
+}
+
+.sf-person__contact-info-wrap {
+  margin-top: 14px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.sf-person__contact-heading {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.sf-person__contact-heading > h2 {
+  font-size: 1.5rem;
+  line-height: 1.42;
+}
+
+.sf-person__contact-item {
+  margin-bottom: 10px;
+}
+
+.sf-person__contact-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.sf-person__contact-item a {
+  font-size: 0.9375rem;
+  letter-spacing: 0.38px;
+}
+
+.sf-person__contact-item a:active,
+.sf-person__contact-item a:focus,
+.sf-person__contact-item a:hover {
+  text-decoration: underline;
+}
+
+.sf-person__contact-url ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sf-person__contact-url li {
+  margin-bottom: 7px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.sf-person__contact-url li:before {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon_website.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-size: 100%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.sf-person a.sf-person__contact-url-link {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sf-person__address {
+  margin-top: 12px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.sf-person__address:before {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon_location.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+.sf-person__address p {
+  padding-left: 44px;
+  margin-bottom: 0;
+}
+
+.sf-person__address p span {
+  font-size: 1rem;
+  letter-spacing: 0.38px;
+  line-height: 1.7;
+}
+
+.sf-person a.link--email {
+  word-break: break-all;
+  font-size: 1rem;
+}
+
+.sf-person__bio {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 48em) {
+  .sf-person__bio {
+    margin-bottom: 70px;
+    margin-top: 30px;
+  }
+}
+
+.sf-person__pubs .btn {
+  padding: 6px 52px;
+  margin-top: 10px;
+}
+
+.sf-person .c-accordion__item-content {
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+}
+
+.sf-person .c-accordion__item-content span {
+  padding: 0 2px;
+}
+
+.sf-person .c-accordion__item-content span.education-degree {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.sf-person .c-accordion__item-content span.education-organization {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.sf-person .c-accordion__item-content span.research-date {
+  display: block;
+  margin-top: 14px;
+  padding-left: 0;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=sf-person.css.map */

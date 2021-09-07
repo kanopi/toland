@@ -1,0 +1,48 @@
+/**
+ * This file is for publications teaser.
+ */
+.pubs-teaser__main-title {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.pubs-teaser__main-title > h2 {
+  font-family: "HelveticaNeueLTW04-65Medium", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.38px;
+  color: #4f4f4f;
+}
+
+.pubs-teaser__title > h2 {
+  font-size: 1.5rem;
+  line-height: 1.42;
+}
+
+@media (min-width: 64em) {
+  .pubs-teaser__title > h2 {
+    max-width: 95%;
+  }
+}
+
+.pubs-teaser__title > h2 a:not(.btn) {
+  text-decoration: none;
+  color: #070707;
+  padding: 0;
+}
+
+.pubs-teaser__item {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+.pubs-teaser__content {
+  font-size: 0.875rem;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: #4f4f4f;
+}
+
+/*# sourceMappingURL=pubs-teaser.css.map */

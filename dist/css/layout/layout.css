@@ -1,0 +1,76 @@
+.main.l-content {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-node-type-article .main.l-content {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-is-fullwidth .main.l-content {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-utility .main.l-content p {
+  font-size: 1.125rem;
+}
+
+.help {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-content-wrap.has-sidebar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 57.5em) {
+  .page-content-wrap.has-sidebar {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+}
+
+.page-content-wrap.has-sidebar .sidebar-first {
+  width: 100%;
+}
+
+@media (min-width: 57.5em) {
+  .page-content-wrap.has-sidebar .sidebar-first {
+    width: 30%;
+    padding-right: 30px;
+  }
+}
+
+.page-content-wrap.has-sidebar .page-content {
+  width: 100%;
+}
+
+@media (min-width: 57.5em) {
+  .page-content-wrap.has-sidebar .page-content {
+    width: 70%;
+    padding-left: 44px;
+  }
+}
+
+.print-logo {
+  display: none !important;
+}
+
+/*# sourceMappingURL=layout.css.map */

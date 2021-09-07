@@ -1,0 +1,120 @@
+/**
+ * This file is for the text component.
+ */
+.text-block {
+  margin-bottom: 20px;
+}
+
+.page-is-fullwidth .text-block {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 48em) {
+  .text-block {
+    margin-bottom: 50px;
+  }
+}
+
+.text-block--bg-gray {
+  background-color: #f9f9f9;
+  padding: 30px 30px 10px 30px;
+}
+
+.text-block--bg-orange {
+  background-color: #cd4c00;
+}
+
+.text-block--bg-blue {
+  background-color: #072049;
+}
+
+.text-block--bg-medium-blue {
+  background-color: #485e7f;
+}
+
+.text-block--bg-orange,
+.text-block--bg-medium-blue,
+.text-block--bg-blue {
+  padding: 30px 30px 10px 30px;
+}
+
+.text-block--bg-orange *,
+.text-block--bg-medium-blue *,
+.text-block--bg-blue * {
+  color: #fff;
+}
+
+.text-block__text img {
+  width: 100%;
+  height: auto;
+}
+
+.text-block__text figure {
+  margin: 0;
+  padding: 0;
+}
+
+.text-block__text figcaption {
+  font-size: 0.875rem;
+  padding: 2px 0 8px 30px;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #072049;
+}
+
+.text-block__text figcaption:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.text-block__text .media {
+  margin-bottom: 20px;
+}
+
+.text-block__text .gray-bg {
+  background-color: #f9f9f9;
+  padding: 30px 30px 10px 30px;
+  margin-bottom: 20px;
+}
+
+.text-block .align-left {
+  padding-right: 20px;
+  width: 50%;
+}
+
+@media (max-width: 47.99em) {
+  .text-block .align-left {
+    float: none;
+    width: 100%;
+  }
+}
+
+.text-block .align-right {
+  padding-left: 20px;
+  width: 50%;
+}
+
+@media (max-width: 47.99em) {
+  .text-block .align-right {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=text-block.css.map */

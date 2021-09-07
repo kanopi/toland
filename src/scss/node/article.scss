@@ -1,0 +1,81 @@
+/**
+ * This file is for node type article theming.
+ */
+@import "../global-includes";
+
+.l-article {
+
+  h1 {
+    @include rem(font-size, 38px);
+    color: $c-black;
+  }
+
+  &__tag {
+    @include rem(font-size, 15px);
+    color: $c-med-blue;
+    line-height: 1.8;
+    letter-spacing: 0.38px;
+    margin-bottom: 8px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: $c-med-blue;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &__byline {
+    font-size: 14px;
+    line-height: 1.86;
+    color: $c-charcoal;
+    margin-bottom: 50px;
+
+    > span {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 103px;
+
+    p,
+    li {
+      @include rem(font-size, 16px);
+    }
+
+    article img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+
+    p {
+      font-family: $font-garamond-regular;
+      @include rem(font-size, 24px);
+      line-height: 1.42;
+      color: $c-black;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__media {
+    margin-bottom: 40px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

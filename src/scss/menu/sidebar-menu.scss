@@ -1,0 +1,70 @@
+/**
+ * Sidebar menu.
+ */
+@import "../global-includes";
+
+.sidebar-menu {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $c-light-gray;
+
+    @include mq($from: large) {
+      padding: 10px;
+    }
+
+    @include root-modifier('.sidebar-menu--parent') {
+      padding-bottom: 0;
+    }
+
+    @include root-modifier('.sidebar-menu--child') {
+      padding-top: 0;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__item {
+
+    @include root-modifier('.sidebar-menu--parent') {
+      display: none;
+
+      &--active-trail {
+        display: block;
+      }
+
+      .sidebar-active-child & {
+
+        > a:not(.btn) {
+          background-color: transparent;
+          color: $c-charcoal;
+
+          #{$a-tags-hover} {
+            background-color: $c-med-blue;
+            color: $c-white;
+          }
+        }
+      }
+    }
+
+    > a:not(.btn) {
+      display: block;
+      padding: 10px 10px;
+      text-decoration: none;
+      color: $c-charcoal;
+    }
+
+    &--active-trail {
+      > a:not(.btn) {
+        background-color: $c-med-blue;
+        color: $c-white;
+      }
+    }
+
+    > ul {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

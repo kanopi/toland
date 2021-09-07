@@ -1,0 +1,46 @@
+/**
+ * This file is for node type article theming.
+ */
+.scs-node {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 57.5em) {
+  .scs-node__wrap {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 57.5em) {
+  .scs-node__content {
+    width: 60%;
+    padding-right: 30px;
+  }
+}
+
+.scs-node__content h1 {
+  margin-bottom: 36px;
+}
+
+.scs-node__sidebar {
+  padding-top: 4px;
+}
+
+@media (min-width: 57.5em) {
+  .scs-node__sidebar {
+    width: 40%;
+    padding-left: 40px;
+    padding-right: 60px;
+  }
+}
+
+.scs-node__sidebar .c-media {
+  margin-bottom: 0;
+}
+
+.scs-node .media--type-document .field--name-name {
+  display: none;
+}
+
+/*# sourceMappingURL=scs-node.css.map */

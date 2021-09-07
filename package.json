@@ -1,0 +1,44 @@
+{
+  "name": "dermatology_theme",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for the UCSF Dermatology theme",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanopi/gbhi.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-mode": "^1.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-svg-sprite": "1.5.0",
+    "gulp-terser": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.1",
+    "sass-mq": "^5.0.1",
+    "uglify-es": "^3.3.9",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "gulp-sass-lint": "^1.4.0"
+  },
+  "devDependencies": {
+    "gulp-csscomb": "^3.1.0"
+  }
+}

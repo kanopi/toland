@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(18.500000, 18.500000) scale(-1, 1) translate(-18.500000, -18.500000) ">
+            <circle id="Oval" fill="#CD4C00" fill-rule="nonzero" cx="18.5" cy="18.5" r="18.5"></circle>
+            <polygon id="Path" stroke="#FFFFFF" transform="translate(16.985000, 18.499500) scale(-1, 1) rotate(90.000000) translate(-16.985000, -18.499500) " points="16.9855 14.4055 22.5415 22.5935 11.4285 22.5935 16.9845 14.4055"></polygon>
+        </g>
+    </g>
+</svg>

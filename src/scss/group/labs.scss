@@ -1,0 +1,84 @@
+/*
+* Labs theming.
+ */
+@import "../global-includes";
+
+.group-lab {
+
+  &__header {
+    background-color: $c-med-blue;
+    @include full-width();
+  }
+
+  &__container {
+    @include container(1340px);
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include mq($from: large) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include mq($until: large) {
+      flex-direction: column;
+    }
+
+    @include mq($from: large) {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__name {
+    color: $c-white;
+    @include rem(font-size, 22px);
+  }
+
+  &__menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mq($until: large) {
+      flex-direction: column;
+    }
+
+    @include mq($from: large) {
+      padding: 0 70px 0 0;
+    }
+  }
+
+  &__menu-item {
+
+    a:not(.btn) {
+      font-family: $font-helvetica-neue-medium;
+      @include rem(font-size, 17px);
+      color: $c-white;
+      text-decoration: none;
+      display: block;
+
+      @include mq($from: large) {
+        margin-left: 40px;
+      }
+
+      #{$a-tags-hover} {
+        text-decoration: underline;
+      }
+    }
+
+    &:first-child {
+      a:not(.btn) {
+
+        @include mq($from: large) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

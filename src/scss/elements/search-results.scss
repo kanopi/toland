@@ -1,0 +1,27 @@
+/*
+* Pager styling.
+ */
+@import "../global-includes";
+
+.search-results {
+
+  &__item-list {
+    padding-left: 24px;
+
+    @include mq($from: narrow_plus) {
+      margin-top: 40px;
+    }
+  }
+
+  .js-form-submit.form-submit {
+    margin-right: 20px;
+
+    @include mq($until: narrow_plus) {
+      margin-bottom: 20px;
+    }
+  }
+
+  label {
+    @include visually-hidden();
+  }
+}

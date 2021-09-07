@@ -1,0 +1,153 @@
+/**
+ * This file is for the hero component.
+ */
+@import "../global-includes";
+
+.c-media {
+  margin-bottom: 10px;
+
+  @include mq($from: large) {
+    margin-bottom: 40px;
+  }
+
+  &--full-width {
+    @include full-width();
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__caption {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    @include rem(font-size, 14px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $c-navy;
+    @include icon-after(dropdown-arrow, 18px, 18px, $position: absolute, $left: 0, $top: 8px, $rotate: 180);
+  }
+
+  .media--bundle--image {
+    position: relative;
+  }
+}
+
+// Offset image colors and position.
+.offset-color {
+
+  .media--type-image {
+    position: relative;
+    //overflow: hidden;
+
+    img {
+      position: relative;
+      z-index: 10;
+    }
+
+    &:after {
+      width: 66%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+
+      @include mq($from: large) {
+        content: '';
+      }
+
+      @include mq($from: medium_plus) {
+        width: 73%;
+      }
+
+      @include mq($from: large) {
+        width: 82%;
+      }
+    }
+  }
+
+  &--top-left-blue {
+    .media--type-image {
+      &:after {
+        background-color: $c-navy;
+        right: 240px;
+        top: -30px;
+      }
+    }
+  }
+
+  &--top-right-blue {
+    .media--type-image {
+      &:after {
+        background-color: $c-navy;
+        left: 240px;
+        top: -30px;
+      }
+    }
+  }
+
+  &--bottom-right-blue {
+    .media--type-image {
+      &:after {
+        background-color: $c-navy;
+        left: 240px;
+        bottom: -30px;
+      }
+    }
+  }
+
+  &--bottom-left-blue {
+    .media--type-image {
+      &:after {
+        background-color: $c-navy;
+        right: 240px;
+        bottom: -30px;
+      }
+    }
+  }
+
+  &--top-left-orange {
+    .media--type-image {
+      &:after {
+        background-color: $c-orange;
+        right: 240px;
+        top: -30px;
+      }
+    }
+  }
+
+  &--top-right-orange {
+    .media--type-image {
+      &:after {
+        background-color: $c-orange;
+        left: 240px;
+        top: -30px;
+      }
+    }
+  }
+
+  &--bottom-right-orange {
+    .media--type-image {
+      &:after {
+        background-color: $c-orange;
+        left: 240px;
+        bottom: -30px;
+      }
+    }
+  }
+
+  &--bottom-left-orange {
+    .media--type-image {
+      &:after {
+        background-color: $c-orange;
+        right: 240px;
+        bottom: -30px;
+      }
+    }
+  }
+}

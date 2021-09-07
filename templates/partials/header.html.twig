@@ -1,0 +1,47 @@
+{{ attach_library('ucsf_dermatology_th/header') }}
+
+{# Partial from page.html.twig #}
+<div class="universal-header">
+  <div class="universal-header__region">
+    <p class="universal-header__title"><a href=".">{{ 'University of California San Francisco' | t }}</a></p>
+    {{ page.universal_header }}
+  </div>
+</div>
+
+<div class="header">
+  <div class="header__wrap">
+
+    <div class="header__first">
+      <figure class="header__logo">
+        <a class="header__link" href="{{ path('<front>') }}" title="{{ 'Home'|t }} {{ site_name }}" rel="home">
+          <picture class="header__logo">
+            <img class="header__logo-img" src="/{{ directory ~ '/logo.png' }}" alt="{{ 'Home'|t }}" width="249"
+                 height="56">
+          </picture>
+        </a>
+      </figure>
+    </div>
+
+    <div class="header__second">
+
+      <div class="header__search">
+        {# Search box. #}
+        {{ drupal_block('views_exposed_filter_block:search_api-search_page', wrapper=false) }}
+      </div>
+
+      <div class="header__menu">
+        {# Main navigation. #}
+        {{ page.menu }}
+      </div>
+
+
+      <div class="header__off-canvas">
+        <a href="#block-off-canvas-nav" id="off-canvas-opener" class="header__off-canvas-expand"
+           tabindex="0" role="button">
+          <span id="menu-trigger" class="visually-hidden">{{ 'Open Menu'|t }}</span>
+          <span class="header__off-canvas-trigger" tabindex="0" aria-labelledby="menu-trigger"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

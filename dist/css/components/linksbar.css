@@ -1,0 +1,74 @@
+/**
+ * This file is for the linksbar component.
+ */
+.component__item .links-bar {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.hero-has-linksbar.node--view-mode-hero .links-bar {
+  position: relative;
+  z-index: 1001;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 64em) {
+  .hero-has-linksbar.node--view-mode-hero .links-bar {
+    margin-top: -57px;
+  }
+}
+
+.links-bar__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 63.99em) {
+  .links-bar__wrap {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.links-bar a:not(.btn) {
+  font-size: 1rem;
+  display: block;
+  color: #fff;
+  transition: all 0.6s ease 0s;
+  padding: 18px 74px;
+  line-height: 1.8;
+  letter-spacing: 3px;
+  background-color: #485e7f;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  overflow: hidden;
+}
+
+.links-bar a:not(.btn):active,
+.links-bar a:not(.btn):focus,
+.links-bar a:not(.btn):hover {
+  background-color: #cd4c00;
+}
+
+.links-bar__item--index-1 a:not(.btn) {
+  background-color: #3e5577;
+}
+
+.links-bar__item--index-3 > a:not(.btn) {
+  background-color: #4e678c;
+}
+
+.links-bar__item--index-4 > a:not(.btn) {
+  background-color: #557097;
+}
+
+/*# sourceMappingURL=linksbar.css.map */

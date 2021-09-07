@@ -1,0 +1,105 @@
+@import "../global-includes";
+
+.header-region {
+  background-color: $c-white;
+  padding-bottom: 0;
+
+  .modal-is-open & {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.header {
+  position: relative;
+  @include container(1290px);
+  min-height: 130px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 130px;
+
+    @include mq($until: large) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__first {
+    width: 100%;
+
+    @include mq($until: large) {
+      padding-top: 20px;
+    }
+
+    @include mq($from: large) {
+      width: 20%;
+    }
+  }
+
+  &__second {
+    width: 100%;
+    display: flex;
+
+    @include mq($from: large) {
+      align-items: flex-end;
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+
+  &__logo {
+    margin: 0;
+
+    img {
+      height: auto;
+
+      @include mq($until: wide) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__off-canvas {
+
+    @include mq($from: large) {
+      display: none;
+    }
+  }
+
+  &__search {
+
+    @include mq($from: large) {
+      margin-top: -10px;
+    }
+
+    @include mq($until: large) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    z-index: 101;
+  }
+
+  &__off-canvas-trigger {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    @include icon-after(icon-menu-trigger, 44px, 44px, $position: relative, $top: 1px, $right: 14px);
+  }
+}
+
+a.skip-link {
+  background: $c-charcoal;
+  display: block;
+  padding: 20px;
+  color: $c-white;
+  text-align: center;
+  font-size: 20px;
+  outline: 2px solid $c-orange;
+}

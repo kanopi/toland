@@ -1,0 +1,50 @@
+// Image and svg paths.
+// example usage:
+// background-image: url("#{$path-to-images}/yada-yada.png");
+// Noting that these paths may not be ideal but it is so it can work in CKEditor and the front-end.
+$path-to-icons: "/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg";
+$path-to-images: "/sites/dermatology.ucsf.edu/themes/custom/toland/dist/images";
+
+// Breakpoints.
+// Map for sass MQ.
+$mq-breakpoints: (
+  zero: 0,
+  narrow: 375px,
+  narrow_plus: 520px,
+  medium: 768px,
+  medium_plus: 920px,
+  large: 1024px,
+  larger: 1080px,
+  large_plus: 1180px,
+  wide: 1280px,
+  x_wide: 1440px,
+);
+
+// Uncomment to debug breakpoints.
+//$mq-show-breakpoints: (narrow, narrow_plus, medium, medium, medium_plus, large, wide, x_wide);
+
+// Hover and focus states.
+// Can be used like so: #{$a-tags-hover} {...
+$a-tags-hover:
+'&:active,
+&:focus,
+&:hover ';
+
+// Colors.
+$c-navy: #072049;
+$c-med-blue: #485e7f;
+$c-orange: #cd4c00;
+$c-charcoal: #4f4f4f;
+$c-black: #070707;
+$c-white: #fff;
+$c-gray: #e5e5e5;
+$c-border: #e2e2e2;
+$c-light-gray: #f9f9f9;
+$c-border-heading: #d7d7d7;
+$c-divider: #a7a7a7;
+$c-med-gray: #737373;
+
+// Fonts.
+$font-helvetica-neue-regular: "HelveticaNeueLTW04-55Roman", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-helvetica-neue-medium: "HelveticaNeueLTW04-65Medium", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-garamond-regular: 'EB Garamond', Garamond, serif;

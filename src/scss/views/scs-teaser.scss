@@ -1,0 +1,160 @@
+/**
+ * This file is for the conditions, surgery, and services views.
+ */
+@import "../global-includes";
+
+.scs-teaser {
+
+  .views-exposed-form {
+    @include visually-hidden();
+  }
+
+  a:not(.btn) {
+    text-decoration: none;
+    color: $c-med-gray;
+
+    #{$a-tags-hover} {
+
+      h2 {
+        color: $c-white;
+      }
+
+      .btn {
+        background-color: $c-orange;
+        color: $c-white;
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  a.scs-teaser__item-inner {
+    display: flex;
+    height: 100%;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $c-gray;
+
+    @include mq($until: large) {
+      flex-direction: column;
+    }
+
+    @include mq($from: large) {
+      align-items: center;
+    }
+  }
+
+  &__media {
+
+    @include mq($until: large) {
+      margin-bottom: 20px;
+    }
+
+    @include mq($from: large) {
+      width: 19%;
+    }
+
+    @include mq($from: large_plus) {
+      width: 17%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+
+      @include mq($from: large) {
+        width: 185px;
+        height: 142px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__content {
+
+    @include mq($from: large, $until: large_plus) {
+      padding-left: 20px;
+    }
+
+    @include mq($from: large) {
+      width: 58%;
+    }
+
+    @include mq($from: large_plus) {
+      width: 60%;
+    }
+  }
+
+  &__button {
+
+    @include mq($from: large) {
+      display: flex;
+      justify-content: flex-end;
+      width: 18%;
+    }
+
+    @include mq($from: large_plus) {
+      width: 19%;
+    }
+  }
+
+  &__text {
+
+    p {
+      @include rem(font-size, 15px);
+      font-family: $font-helvetica-neue-medium;
+      line-height: 1.8;
+      letter-spacing: 0.38px;
+    }
+  }
+}
+
+.scs-glossary {
+  margin-bottom: 30px;
+  margin-top: -20px;
+
+  @include mq($until: large) {
+    background-color: $c-navy;
+    padding: 2px 20px;
+    margin-top: 20px;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    @include mq($until: large) {
+      flex-wrap: wrap;
+    }
+
+    @include mq($from: large) {
+      justify-content: space-between;
+      max-width: 95%;
+    }
+  }
+
+  &__item {
+
+    @include mq($until: large) {
+      width: 30px;
+    }
+
+    a:not(.btn) {
+      @include rem(font-size, 15px);
+      font-weight: 600;
+      letter-spacing: 0.38px;
+      color: $c-charcoal;
+      text-decoration: none;
+
+      @include mq($until: large) {
+        color: $c-white;
+      }
+    }
+  }
+}

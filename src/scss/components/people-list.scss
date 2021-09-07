@@ -1,0 +1,41 @@
+/*
+People list styling.
+ */
+@import "../global-includes";
+
+.people-list {
+
+  &--is-sidebar {
+    background-color: $c-light-gray;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+
+    @include root-modifier('.people-list--is-main-content') {
+
+      @include mq($from: large) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__main-title {
+
+    h2 {
+      @include rem(font-size, 24px);
+      line-height: 1.42;
+      letter-spacing: normal;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $c-border-heading;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+  }
+}

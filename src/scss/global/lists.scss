@@ -1,0 +1,30 @@
+@import "../global-includes";
+
+.text-block__text {
+  ol {
+    margin-left: 0;
+    padding-left: 24px;
+
+    li {
+      padding-left: 10px;
+    }
+  }
+
+  ul {
+    @include list-reset();
+    margin-left: 10px;
+
+    li {
+      position: relative;
+      padding-left: 24px;
+
+      &:before {
+        content: '\2022';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        @include rem(font-size, 9px);
+      }
+    }
+  }
+}

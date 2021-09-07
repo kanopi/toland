@@ -1,0 +1,48 @@
+/**
+ * This file is for breadcrumbs.
+ */
+
+@import "../global-includes";
+
+.breadcrumbs {
+  background-color: $c-med-blue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+  .page-has-hero & {
+    margin-bottom: 0;
+  }
+
+  &__container {
+    @include container(1280px);
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include mq($from: medium) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    color: $c-white;
+    @include rem(font-size, 14px);
+    letter-spacing: 2.1px;
+    margin-right: 6px;
+  }
+
+  &__link {
+    color: $c-white;
+    @include rem(font-size, 14px);
+    text-decoration: none;
+    letter-spacing: 2.1px;
+
+    #{$a-tags-hover} {
+      text-decoration: underline;
+    }
+  }
+}

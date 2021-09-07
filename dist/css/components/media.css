@@ -1,0 +1,143 @@
+/**
+ * This file is for the hero component.
+ */
+.c-media {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 64em) {
+  .c-media {
+    margin-bottom: 40px;
+  }
+}
+
+.c-media--full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 0 -50vw;
+  overflow: hidden;
+}
+
+.c-media img {
+  width: 100%;
+  height: auto;
+}
+
+.c-media figure {
+  margin: 0;
+  padding: 0;
+}
+
+.c-media__caption {
+  padding: 8px 0 8px 30px;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #072049;
+}
+
+.c-media__caption:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.c-media .media--bundle--image {
+  position: relative;
+}
+
+.offset-color .media--type-image {
+  position: relative;
+}
+
+.offset-color .media--type-image img {
+  position: relative;
+  z-index: 10;
+}
+
+.offset-color .media--type-image:after {
+  width: 66%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+@media (min-width: 64em) {
+  .offset-color .media--type-image:after {
+    content: "";
+  }
+}
+
+@media (min-width: 57.5em) {
+  .offset-color .media--type-image:after {
+    width: 73%;
+  }
+}
+
+@media (min-width: 64em) {
+  .offset-color .media--type-image:after {
+    width: 82%;
+  }
+}
+
+.offset-color--top-left-blue .media--type-image:after {
+  background-color: #072049;
+  right: 240px;
+  top: -30px;
+}
+
+.offset-color--top-right-blue .media--type-image:after {
+  background-color: #072049;
+  left: 240px;
+  top: -30px;
+}
+
+.offset-color--bottom-right-blue .media--type-image:after {
+  background-color: #072049;
+  left: 240px;
+  bottom: -30px;
+}
+
+.offset-color--bottom-left-blue .media--type-image:after {
+  background-color: #072049;
+  right: 240px;
+  bottom: -30px;
+}
+
+.offset-color--top-left-orange .media--type-image:after {
+  background-color: #cd4c00;
+  right: 240px;
+  top: -30px;
+}
+
+.offset-color--top-right-orange .media--type-image:after {
+  background-color: #cd4c00;
+  left: 240px;
+  top: -30px;
+}
+
+.offset-color--bottom-right-orange .media--type-image:after {
+  background-color: #cd4c00;
+  left: 240px;
+  bottom: -30px;
+}
+
+.offset-color--bottom-left-orange .media--type-image:after {
+  background-color: #cd4c00;
+  right: 240px;
+  bottom: -30px;
+}
+
+/*# sourceMappingURL=media.css.map */

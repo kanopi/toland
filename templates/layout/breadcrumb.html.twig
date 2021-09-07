@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('ucsf_dermatology_th/breadcrumbs') }}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <span id="system-breadcrumb" class="visually-hidden" tabindex="0">{{ 'Breadcrumb'|t }}</span>
+    <div class="breadcrumbs__container">
+      <ol class="breadcrumbs__list">
+        {% for item in breadcrumb %}
+          <li class="breadcrumbs__item">
+            {% if item.url %}
+              <a class="breadcrumbs__link" href="{{ item.url }}">{{ item.text }}</a>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+            {% if not loop.last %}
+              <span>{{ '/'|t }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </nav>
+{% endif %}

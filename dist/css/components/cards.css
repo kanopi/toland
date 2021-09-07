@@ -1,0 +1,219 @@
+/**
+ * This file is for cards css.
+ * root-modifier('.card--list') = standard cards
+ * root-modifier('.card--carousel-list')= carousel cards
+ */
+.card {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.page-is-fullwidth .card--list {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card__header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card--list .card__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.card--list .card__item {
+  margin-right: 16px;
+  margin-left: 16px;
+  box-shadow: 0 12px 24px 0 rgba(192, 192, 192, 0.2);
+}
+
+@media (max-width: 63.99em) {
+  .card__item {
+    margin-bottom: 30px;
+  }
+}
+
+.card--list .card__item {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .card--list .card__item {
+    width: 30%;
+  }
+}
+
+.card--carousel-list .card__item-inner {
+  box-shadow: 0 12px 24px 0 rgba(192, 192, 192, 0.2);
+}
+
+.card__media img {
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+  object-position: 50% 80%;
+}
+
+@media (max-width: 63.99em) {
+  .card__media img {
+    object-position: 50% 25%;
+    height: 370px;
+  }
+}
+
+@media (min-width: 57.5em) {
+  .card__media img {
+    height: 223px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card__media img {
+    height: auto;
+  }
+}
+
+.card__content {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card__content h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.6px;
+  color: #070707;
+}
+
+.card .tns-controls {
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card .tns-controls span {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.card .tns-controls button {
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  margin: 0;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.card .tns-controls button[data-controls="prev"]:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-size: 100%;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: relative;
+}
+
+.card .tns-controls button[data-controls="prev"]:active:after,
+.card .tns-controls button[data-controls="prev"]:focus:after,
+.card .tns-controls button[data-controls="prev"]:hover:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-size: 100%;
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: relative;
+}
+
+.card .tns-controls button[data-controls="next"]:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-size: 100%;
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  position: relative;
+}
+
+.card .tns-controls button[data-controls="next"]:active:after,
+.card .tns-controls button[data-controls="next"]:focus:after,
+.card .tns-controls button[data-controls="next"]:hover:after {
+  content: " ";
+  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-size: 100%;
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  position: relative;
+}
+
+.card .tns-ovh {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 0 -50vw;
+  overflow: hidden;
+}
+
+@media (min-width: 64em) {
+  .card .tns-ovh {
+    height: 400px;
+  }
+}
+
+.card .tns-inner {
+  max-width: 80%;
+  margin: 0 auto !important;
+}
+
+.card .tns-nav {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+.card .tns-nav + button {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+/*# sourceMappingURL=cards.css.map */

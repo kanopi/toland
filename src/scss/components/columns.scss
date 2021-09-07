@@ -1,0 +1,255 @@
+/**
+ * This file is for the hero component.
+ */
+@import "../global-includes";
+
+.columns {
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+  &.remove-top-padding {
+    margin-top: 0;
+  }
+
+  &__item-list {
+
+    @include mq($from: large) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+
+    &:first-child {
+
+      @include root-modifier('.columns--layout-column-wider-left') {
+
+        @include mq($from: large) {
+          width: 60%;
+          padding-right: 16px;
+        }
+      }
+
+      @include root-modifier('.columns--layout-column-wider-right') {
+
+        @include mq($from: large) {
+          width: 40%;
+          padding-right: 16px;
+        }
+      }
+
+      @include root-modifier('.columns--layout-equal') {
+
+        @include mq($from: large) {
+          width: 50%;
+          padding-right: 28px;
+        }
+      }
+
+      @include root-modifier('.columns--layout-sidebar-right') {
+        @include mq($from: medium_plus) {
+          width: 66%;
+          padding-right: 28px;
+        }
+      }
+    }
+
+    &:last-child {
+
+      @include root-modifier('.columns--layout-column-wider-left') {
+
+        @include mq($from: large) {
+          width: 40%;
+          padding-left: 16px;
+        }
+      }
+
+      @include root-modifier('.columns--layout-column-wider-right') {
+
+        @include mq($from: large) {
+          width: 60%;
+          padding-left: 16px;
+        }
+      }
+
+
+      @include root-modifier('.columns--layout-equal') {
+
+        @include mq($from: large) {
+          width: 50%;
+          padding-left: 28px;
+        }
+      }
+
+      @include root-modifier('.columns--layout-sidebar-right') {
+        @include mq($from: medium_plus) {
+          width: 34%;
+          padding-left: 28px;
+        }
+      }
+    }
+  }
+
+  // Background colors.
+  &--background-med-blue {
+    background-color: $c-med-blue;
+
+    &.columns--offset-small {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 59px, $c-med-blue 60px);
+      }
+    }
+
+    &.columns--offset-medium {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 79px, $c-med-blue 80px);
+      }
+    }
+
+    &.columns--offset-large {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 99px, $c-med-blue 100px);
+      }
+    }
+  }
+
+  &--background-blue {
+    background-color: $c-navy;
+
+    &.columns--offset-small {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 59px, $c-navy 60px);
+      }
+    }
+
+    &.columns--offset-medium {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 79px, $c-navy 80px);
+      }
+    }
+
+    &.columns--offset-large {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 99px, $c-navy 100px);
+      }
+    }
+  }
+
+  &--background-orange {
+    background-color: $c-orange;
+
+    &.columns--offset-small {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 59px, $c-orange 60px);
+      }
+    }
+
+    &.columns--offset-medium {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 79px, $c-orange 80px);
+      }
+    }
+
+    &.columns--offset-large {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 99px, $c-orange 100px);
+      }
+    }
+  }
+
+  &--background-gray {
+    background-color: $c-light-gray;
+
+    &.columns--offset-small {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 59px, $c-light-gray 60px);
+      }
+    }
+
+    &.columns--offset-medium {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 79px, $c-light-gray 80px);
+      }
+    }
+
+    &.columns--offset-large {
+      @include mq($from: large) {
+        background: linear-gradient(to top, $c-white 99px, $c-light-gray 100px);
+      }
+    }
+  }
+
+  &.has-dark-bg {
+    * {
+      color: $c-white;
+    }
+  }
+
+  &__full-width {
+    @include full-width();
+  }
+
+  &__wrap {
+
+    .columns__full-width & {
+      @include container(1320px);
+    }
+
+    .text-block {
+
+      @include mq($from: medium_plus) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        // Default align center.
+        justify-content: center;
+
+        @include root-modifier('.text-vert-align--middle-offset') {
+
+          @include mq($from: large) {
+            justify-content: center;
+            margin-top: -40px;
+          }
+        }
+
+        @include root-modifier('.text-vert-align--top-offset') {
+
+          @include mq($from: large) {
+            justify-content: flex-start;
+            margin-top: -30px;
+          }
+        }
+
+        @include root-modifier('.text-vert-align--top') {
+
+          @include mq($from: large) {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      h2 {
+        @include mq($from: medium_plus) {
+          max-width: 82%;
+        }
+      }
+    }
+
+    @include root-modifier('.has-bg.has-offset') {
+      padding: 0;
+    }
+
+    @include root-modifier('.has-bg') {
+      padding: 20px;
+
+      .text-block {
+        padding: 20px;
+      }
+    }
+  }
+
+  .text-block {
+    margin-bottom: 0;
+  }
+}

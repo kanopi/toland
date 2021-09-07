@@ -1,0 +1,76 @@
+/**
+ * This file is for the labs teaser view.
+ */
+@import "../global-includes";
+
+.labs-teaser {
+
+  &__item {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid $c-gray;
+  }
+
+  &__item-inner {
+    display: flex;
+
+    @include mq($until: medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+
+    @include mq($from: medium, $until: large) {
+      width: 45%;
+      padding-right: 30px;
+    }
+
+    @include mq($from: large) {
+      width: 45%;
+      padding-right: 30px;
+    }
+
+    h2 {
+      .filtered-list & {
+        text-align: left;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__media {
+
+    @include mq($from: medium, $until: large) {
+      width: 55%;
+    }
+
+    @include mq($from: large) {
+      width: 55%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      @include mq($from: large_plus) {
+        height: 306px;
+        object-fit: cover;
+        object-position: 25% 20%;
+      }
+    }
+  }
+
+  &__text {
+
+    @include mq($from: medium) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__more {
+    @include mq($until: medium) {
+      margin-bottom: 20px;
+    }
+  }
+}

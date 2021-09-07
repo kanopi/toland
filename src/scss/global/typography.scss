@@ -1,0 +1,177 @@
+@import "../global-includes";
+@import "font-face";
+
+body {
+  font-family: $font-helvetica-neue-regular;
+  font-size: 100%;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $c-charcoal;
+  line-height: 1.86;
+}
+
+#{headings(1, 6)} {
+  color: $c-black;
+  font-weight: 400;
+}
+
+.h1,
+h1 {
+  font-family: $font-garamond-regular;
+  @include rem(font-size, 34px);
+  @include rem(margin-bottom, 17px);
+  line-height: 1.31;
+  margin-top: 0;
+
+  @include mq($from: larger) {
+    @include rem(font-size, 45px);
+    @include rem(margin-bottom, 22px);
+  }
+}
+
+.h2,
+h2 {
+  font-family: $font-garamond-regular;
+  @include rem(font-size, 30px);
+  @include rem(margin-bottom, 15px);
+  line-height: 1.13;
+  margin-top: 0;
+
+  @include mq($from: large) {
+    @include rem(font-size, 34px);
+    @include rem(margin-bottom, 19px);
+  }
+}
+
+.h3,
+h3 {
+  font-family: $font-garamond-regular;
+  @include rem(font-size, 20px);
+  @include rem(margin-bottom, 10px);
+  letter-spacing: 0.6px;
+  margin-top: 0;
+
+  @include mq($from: large) {
+    @include rem(font-size, 24px);
+    @include rem(margin-bottom, 12px);
+  }
+}
+
+.h4,
+h4 {
+  font-family: $font-helvetica-neue-regular;
+  @include rem(font-size, 20px);
+  @include rem(margin-bottom, 10px);
+}
+
+.h5,
+h5 {
+  font-family: $font-helvetica-neue-regular;
+  @include rem(font-size, 18px);
+  @include rem(margin-bottom, 9px);
+}
+
+.h6,
+h6 {
+  font-family: $font-helvetica-neue-regular;
+  @include rem(font-size, 16px);
+  @include rem(margin-bottom, 8px);
+}
+
+p {
+  .l-content & {
+    // Larger on mobile.
+    @include rem(font-size, 15px);
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    @include mq($from: large) {
+      @include rem(font-size, 14px);
+      margin-bottom: 24px;
+    }
+  }
+}
+
+li {
+  .text-block__text & {
+    @include rem(font-size, 15px);
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    @include mq($from: large) {
+      @include rem(font-size, 14px);
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.overline {
+  @include rem(font-size, 14px);
+  line-height: 1.17;
+  letter-spacing: 2.77px;
+  color: $c-med-blue;
+
+  .l-content & {
+    margin-bottom: 14px;
+  }
+}
+
+// Custom page title
+.page-title {
+
+  .is-page-type & {
+    padding-bottom: 30px;
+
+    h1 {
+      @extend .h2;
+      position: relative;
+
+      @include mq($from: large) {
+        @include rem(font-size, 36px);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: -24px;
+        border-bottom: 1px solid $c-border-heading;
+        top: 10px;
+      }
+
+      > span {
+        position: relative;
+        display: inline;
+
+        @include mq($until: medium_plus) {
+          width: 100% !important;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          border-bottom: 6px solid $c-med-blue;
+          bottom: -24px;
+          z-index: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+p.sans {
+  .cke_editable &,
+  .l-content & {
+    font-family: $font-helvetica-neue-regular;
+    @include rem(font-size, 16px);
+  }
+}
+
+hr {
+  border-top: 1px solid $c-gray;
+}
