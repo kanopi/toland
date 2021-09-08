@@ -23,7 +23,7 @@ const gulp = require('gulp'),
 // browserSync.
 // To get browserSync running locally, you can run fin gulp
 // and then be sure to have this snippet in your local
-// settings file: $config['ucsf_dermatology_th.settings']['browsersync'] = 1;
+// settings file: $config['toland.settings']['browsersync'] = 1;
 // This hooks into a custom theme setting and adds the JS for browserSync.
 // The reason for this is, we use a different local URL so browserSync proxy does
 // not understand how to get to the page otherwise.

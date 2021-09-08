@@ -37,7 +37,7 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}">
       {# Header preload file. #}
-      {% include '@ucsf_dermatology_th/partials/preload.html.twig' %}
+      {% include '@toland/partials/preload.html.twig' %}
       <js-placeholder token="{{ placeholder_token|raw }}">
         </head>
 <body{{ attributes.addClass(body_classes) }}>
@@ -48,7 +48,7 @@
   {#
   gulp_browsersync only renders if it is the local environment.
   See html.inc in the theme. You also need to have
-  $config['ucsf_dermatology_th.settings']['browsersync'] = 1;
+  $config['toland.settings']['browsersync'] = 1;
   set in your local settings file for this to work.
   #}
   {% if gulp_browsersync | render %}

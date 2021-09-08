@@ -70,7 +70,7 @@
 *   in different view modes.
 */
 #}
-{{ attach_library('ucsf_dermatology_th/sf_person') }}
+{{ attach_library('toland/sf_person') }}
 
 {% set classes = [
   'node',
@@ -96,7 +96,7 @@
               {{ content.field_kup_headshot | field_value }}
             {% else %}
               {# Fallback default image. #}
-              {{ attach_library('ucsf_dermatology_th/blazy') }}
+              {{ attach_library('toland/blazy') }}
               <img class="b-lazy" data-src="/{{ directory ~ '/dist/images/default-profile.png' }}"
                    title="{{ node_title }}"
                    alt="{{ node_title }}"
@@ -132,8 +132,8 @@
 
         {# Accordion include. #}
         {% if ( content.field_kup_education | render ) or  ( content.field_kup_research_activities | render ) or ( content.field_kup_honors_awards | render ) %}
-          {{ attach_library('ucsf_dermatology_th/accordion') }}
-          {% include '@ucsf_dermatology_th/partials/person-accordion.html.twig' %}
+          {{ attach_library('toland/accordion') }}
+          {% include '@toland/partials/person-accordion.html.twig' %}
         {% endif %}
 
         {% if content.field_kup_publications | render %}

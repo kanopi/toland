@@ -42,7 +42,7 @@
  * @see html.html.twig
  */
 #}
-{{ attach_library('ucsf_dermatology_th/page') }}
+{{ attach_library('toland/page') }}
 
 <div {{ attributes.addClass('page') }}>
 
@@ -59,7 +59,7 @@
     </a>
 
     {# Header include file #}
-    {% include '@ucsf_dermatology_th/partials/header.html.twig' %}
+    {% include '@toland/partials/header.html.twig' %}
     {# For print only #}
     <img class="print-logo" src="/{{ directory }}/logo.png" width="250" height="56" alt="{{ 'UCSF Dermatology'|t }}">
   </header>
@@ -114,7 +114,7 @@
 
     <footer class="footer">
       {# Footer include file #}
-      {% include '@ucsf_dermatology_th/partials/footer.html.twig' %}
+      {% include '@toland/partials/footer.html.twig' %}
     </footer>
 
   </div>{# /.page #}

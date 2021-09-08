@@ -71,7 +71,7 @@
  */
 #}
 
-{{ attach_library('ucsf_dermatology_th/profile_teaser') }}
+{{ attach_library('toland/profile_teaser') }}
 
 {% set classes = [
   'profile-teaser__inner',
@@ -91,7 +91,7 @@
         {{ content.field_kup_headshot | field_value }}
       {% else %}
         {# Fallback default image. #}
-        {{ attach_library('ucsf_dermatology_th/blazy') }}
+        {{ attach_library('toland/blazy') }}
         <img class="b-lazy" data-src="/{{ directory ~ '/dist/images/default-profile.png' }}"
              title="{{ node_title }}"
              alt="{{ node_title }}"
