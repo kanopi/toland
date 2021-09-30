@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the Keaton theme.
+ * Functions to support theming in the Toland theme.
  */
 
 $includes_path = dirname(__FILE__) . '/includes/*.inc';

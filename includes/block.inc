@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Block functions to support theming in the Dermatology theme.
+ * Block functions to support theming in the Toland theme.
  */
 
 use Drupal\block\Entity\Block;
@@ -41,12 +41,6 @@ function toland_theme_suggestions_block_alter(array &$suggestions, array $vars) 
     }
   }
 
-  // Add theme suggestions to blocks based on region.
-  if (!empty($vars['elements']['#id'])) {
-    $block = Block::load($vars['elements']['#id']);
-    $suggestions[] = 'block__' . $block->getRegion();
-    $suggestions[] = 'block__' . $block->getRegion() . '__' . $vars['elements']['#id'];
-  }
   return $suggestions;
 }
 
