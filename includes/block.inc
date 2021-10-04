@@ -2,14 +2,14 @@
 
 /**
  * @file
- * Block functions to support theming in the Toland theme.
+ * Block functions to support theming in the Dermatology theme.
  */
 
 use Drupal\block\Entity\Block;
 
 /**
  * @file
- * Block functions to support theming in the toland theme.
+ * Block functions to support theming in the ucsf_dermatology_th theme.
  */
 
 /**
@@ -17,11 +17,13 @@ use Drupal\block\Entity\Block;
  */
 function toland_preprocess_block(&$vars) {
   // Pass block region value to content so this can be used in
-  // toland_theme_suggestions_menu_alter.
+  // ucsf_dermatology_th_theme_suggestions_menu_alter.
   if (isset($vars['elements']['#id'])) {
     $block = Block::load($vars['elements']['#id']);
-    $region = $block->getRegion();
-    $vars['content']['#attributes']['region'] = $region;
+    if (!empty($block)) {
+      $region = $block->getRegion();
+      $vars['content']['#attributes']['region'] = $region;
+    }
   }
 }
 
@@ -41,6 +43,14 @@ function toland_theme_suggestions_block_alter(array &$suggestions, array $vars) 
     }
   }
 
+  // Add theme suggestions to blocks based on region.
+  if (!empty($vars['elements']['#id'])) {
+    $block = Block::load($vars['elements']['#id']);
+    if (!empty($block)) {
+      $suggestions[] = 'block__' . $block->getRegion();
+      $suggestions[] = 'block__' . $block->getRegion() . '__' . $vars['elements']['#id'];
+    }
+  }
   return $suggestions;
 }
 
