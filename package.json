@@ -31,7 +31,7 @@
     "gulp-terser": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^8.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sass-mq": "^5.0.1",
     "uglify-es": "^3.3.9",
     "@babel/core": "^7.1.5",
