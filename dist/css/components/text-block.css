@@ -70,7 +70,7 @@
 
 .text-block__text figcaption:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 18px;

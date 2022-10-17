@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the Dermatology theme.
+ * Functions to support theming in the Toland theme.
  */
 
 use Drupal\image\Entity\ImageStyle;

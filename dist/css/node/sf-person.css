@@ -165,7 +165,7 @@
 
 .sf-person__contact-url li:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon_website.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon_website.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 23px;
@@ -189,7 +189,7 @@
 
 .sf-person__address:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon_location.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon_location.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 30px;

@@ -80,7 +80,7 @@
 
 .quicklinks a:not(.btn):after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/arrow.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/arrow.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 22px;
@@ -100,7 +100,7 @@
 .quicklinks a:not(.btn):focus:after,
 .quicklinks a:not(.btn):hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/arrow-white.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/arrow-white.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 22px;

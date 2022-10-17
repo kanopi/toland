@@ -1,7 +1,7 @@
 {
-  "name": "dermatology_theme",
+  "name": "toland_theme",
   "version": "1.0.0",
-  "description": "Gulp dependencies for the UCSF Dermatology theme",
+  "description": "Gulp dependencies for the Toland theme",
   "main": "gulpfile.js",
   "license": "MIT",
   "repository": {

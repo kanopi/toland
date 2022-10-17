@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the UCSF dermatology theme.
+ * Functions to support theming in the Toland theme.
  */
 
 use Drupal\node\NodeInterface;
@@ -90,7 +90,7 @@ function toland_preprocess_html(&$vars) {
   // settings and the local environment.
   if ($browsersync_setting === 1) {
     $host = \Drupal::request()->getHost();
-    if ($host === 'local.dermatology.ucsf.edu') {
+    if ($host === 'ucsf-homelessness.docksal.site') {
       $vars['gulp_browsersync'] = TRUE;
     }
   }

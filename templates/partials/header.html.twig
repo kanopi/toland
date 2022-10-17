@@ -15,7 +15,7 @@
       <figure class="header__logo">
         <a class="header__link" href="{{ path('<front>') }}" title="{{ 'Home'|t }} {{ site_name }}" rel="home">
           <picture class="header__logo">
-            <img class="header__logo-img" src="/{{ directory ~ '/logo.png' }}" alt="{{ 'Home'|t }}" width="249"
+            <img class="header__logo-img" src="/{{ directory ~ '/logo.png' }}" alt="{{ 'Home'|t }}" width="160"
                  height="56">
           </picture>
         </a>
@@ -24,10 +24,10 @@
 
     <div class="header__second">
 
-      <div class="header__search">
-        {# Search box. #}
-        {{ drupal_block('views_exposed_filter_block:search_api-search_page', wrapper=false) }}
-      </div>
+{#      <div class="header__search">#}
+{#        #}{# Search box. #}
+{#        {{ drupal_block('views_exposed_filter_block:search_api-search_page', wrapper=false) }}#}
+{#      </div>#}
 
       <div class="header__menu">
         {# Main navigation. #}

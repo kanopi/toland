@@ -111,7 +111,7 @@ dialog.dialog-content {
 
 .dialog-close:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/expand-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/expand-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 30px;
