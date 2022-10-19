@@ -158,7 +158,7 @@ a.link {
 
 a.link--telephone:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/phone-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/phone-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 29px;
@@ -171,7 +171,7 @@ a.link--telephone:before {
 
 a.link--email:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/mail-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/mail-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 24px;
@@ -185,7 +185,7 @@ a.link--email:before {
 
 a.link--video:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/video-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/video-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 18px;
@@ -198,7 +198,7 @@ a.link--video:before {
 
 a.link--download:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/download-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/download-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 23px;
@@ -211,7 +211,7 @@ a.link--download:before {
 
 a.link--website:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon_website.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon_website.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 23px;
@@ -260,7 +260,7 @@ a.link-bg:after {
 
 a.link-bg--video:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/video-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/video-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 18px;
@@ -276,7 +276,7 @@ a.link-bg--video:active:after,
 a.link-bg--video:focus:after,
 a.link-bg--video:hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/video-icon-white.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/video-icon-white.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 18px;
@@ -290,7 +290,7 @@ a.link-bg--video:hover:after {
 
 a.link-bg--download:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/download-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/download-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 23px;
@@ -306,7 +306,7 @@ a.link-bg--download:active:after,
 a.link-bg--download:focus:after,
 a.link-bg--download:hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/download-icon-white.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/download-icon-white.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 23px;

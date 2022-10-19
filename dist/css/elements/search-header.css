@@ -50,7 +50,7 @@
 
 .search-header__icon:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/search-icon.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/search-icon.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 15px;

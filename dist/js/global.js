@@ -8,7 +8,7 @@
   /*
   * A11Y improvements.
   */
-  Drupal.behaviors.ucsfDermA11y = {
+  Drupal.behaviors.tolandA11y = {
     attach: function attach(context, settings) {
       // Detect the "I am a keyboard user" key.
       // Check if the user is using keyboard navigation and if so, add a class.
@@ -26,7 +26,7 @@
   * Forms.
   */
 
-  Drupal.behaviors.ucsfDermForm = {
+  Drupal.behaviors.tolandForm = {
     attach: function attach(context, settings) {
       // Variables for select label and select.
       var select_item = document.querySelectorAll('.js-form-type-select');

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Form functions to support theming in the Dermatology theme.
+ * Form functions to support theming in the Toland theme.
  */
 
 use Drupal\Core\Form\FormStateInterface;

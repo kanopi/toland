@@ -7,7 +7,7 @@
   /*
  * Misc functions.
  */
-  Drupal.behaviors.ucsfdermMainMenu = {
+  Drupal.behaviors.tolandMainMenu = {
     attach: function (context) {
       // Accessible Mega menu.
       if ($().accessibleMegaMenu) {

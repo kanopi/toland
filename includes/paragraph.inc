@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the UCSF Dermatology theme.
+ * Functions to support theming in the Toland theme.
  */
 
 use Drupal\node\NodeInterface;

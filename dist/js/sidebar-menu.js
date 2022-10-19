@@ -10,7 +10,7 @@
   /*
   * Sidebar menu.
   */
-  Drupal.behaviors.ucsfDermSidebarMenu = {
+  Drupal.behaviors.tolandSidebarMenu = {
     attach: function attach(context, settings) {
       // Find sidebar child menu items.
       var active_child_menu = once('sidebar-menu-once', context.querySelectorAll('.sidebar-menu--child .sidebar-menu__item')); // Loop through them.

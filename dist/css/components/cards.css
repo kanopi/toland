@@ -124,7 +124,7 @@
 
 .card .tns-controls button[data-controls="prev"]:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/next-control.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 38px;
@@ -139,7 +139,7 @@
 .card .tns-controls button[data-controls="prev"]:focus:after,
 .card .tns-controls button[data-controls="prev"]:hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 38px;
@@ -152,7 +152,7 @@
 
 .card .tns-controls button[data-controls="next"]:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/next-control.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 38px;
@@ -167,7 +167,7 @@
 .card .tns-controls button[data-controls="next"]:focus:after,
 .card .tns-controls button[data-controls="next"]:hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/next-control-hover.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 38px;

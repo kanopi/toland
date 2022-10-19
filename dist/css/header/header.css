@@ -115,7 +115,7 @@
 
 .header__off-canvas-trigger:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon-menu-trigger.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon-menu-trigger.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 44px;
