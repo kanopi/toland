@@ -3,7 +3,7 @@ $browser-context: 16; // should be consistent with your html/body font-size
 // Rem mixin to convert a px value to rems.
 // http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
 @function parseInt($n) {
-  @return $n / ($n * 0 + 1);
+  @return calc($n / 16px) * 1rem;
 }
 
 // Converts px into rems
@@ -22,11 +22,11 @@ $browser-context: 16; // should be consistent with your html/body font-size
 
       @if $unit=="px" {
         $px: append($px, $value);
-        $rem: append($rem, ($val / $base-font-size + rem));
+        $rem: append($rem, (calc($val / $base-font-size) + rem));
       }
 
       @if $unit=="rem" {
-        $px: append($px, ($val * $base-font-size + px));
+        $px: append($px, (calc($val * $base-font-size) + px));
         $rem: append($rem, $value);
       }
     }

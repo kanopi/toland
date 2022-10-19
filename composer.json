@@ -1,0 +1,6 @@
+{
+    "name": "kanopi/toland",
+    "description": "Starter theme",
+    "type": "drupal-custom-theme",
+    "require": {}
+}

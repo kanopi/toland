@@ -25,10 +25,7 @@ $mq-breakpoints: (
 
 // Hover and focus states.
 // Can be used like so: #{$a-tags-hover} {...
-$a-tags-hover:
-'&:active,
-&:focus,
-&:hover ';
+$a-tags-hover: '&:active, &:focus, &:hover ';
 
 // Colors.
 $c-navy: #072049;
