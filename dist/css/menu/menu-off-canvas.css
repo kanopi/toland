@@ -130,7 +130,7 @@
 
 .mm-menu .mm-btn.mm-btn_next:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon-carrot-left.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon-carrot-left.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 20px;
@@ -166,7 +166,7 @@
 
 .mm-menu .mm-btn.mm-btn_prev:before {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/icon-carrot-left.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/icon-carrot-left.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 26px;

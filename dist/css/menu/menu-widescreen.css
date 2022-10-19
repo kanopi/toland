@@ -64,7 +64,7 @@
 }
 
 .main-menu__item--mega .main-menu__nav-sub-nav-container {
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/images/v-line.svg");
+  background-image: url("/themes/custom/toland/dist/images/v-line.svg");
   background-repeat: repeat-y;
   background-position: 170px 0;
 }
@@ -149,7 +149,7 @@
 
 .main-menu__item--submenu-level-0 > a:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 11px;
@@ -163,7 +163,7 @@
 
 .main-menu__item--submenu-level-0 > a.panel-is-open:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 11px;
@@ -206,7 +206,7 @@
 
 .main-menu__item--submenu-level-1 > a:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 11px;
@@ -224,7 +224,7 @@
 .main-menu__item--submenu-level-1 > a:focus:after,
 .main-menu__item--submenu-level-1 > a:hover:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow-white.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow-white.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 11px;
@@ -246,7 +246,7 @@
 
 .main-menu__item--submenu-level-1.link-expanded > a:after {
   content: " ";
-  background-image: url("/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/svg/dropdown-arrow-white.svg");
+  background-image: url("/themes/custom/toland/dist/icon/svg/dropdown-arrow-white.svg");
   background-repeat: no-repeat;
   display: inline-block;
   width: 11px;
