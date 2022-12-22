@@ -26,7 +26,8 @@
 
 When you initially run `fin init` to get up and running with this project, that
 command will spawn a sub-command to install NPMs. However, if you ever need to
-make updates and re-run the front-end build install, you can run `fin init-theme`.
+make updates and re-run the front-end build install, you can run 
+`fin init-theme`.
 
 Thereafter you can run `fin gulp` to watch for changes for Sass and JS which 
 in turn will compile the CSS. Sass and JS sources are in the `./src` folder 
