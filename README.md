@@ -24,35 +24,59 @@
 
 ## Getting started
 
-When you initially run `fin init` to get up and running with this project, that command will spawn a sub-command to install NPMs. However, if you ever need to make updates and re-run the front-end build install, you can run `fin init-theme`.
+When you initially run `fin init` to get up and running with this project, that
+command will spawn a sub-command to install NPMs. However, if you ever need to
+make updates and re-run the front-end build install, you can run `fin init-theme`.
 
-Thereafter you can run `fin gulp` to watch for changes for Sass and JS which in turn will compile the CSS. Sass and JS sources are in the `./src` folder and compiled assets land in the `./dist` folder. You'll always want to use Fin's version of gulp rather than a local version and `fin init-theme` takes care of that and sets the correct version.
+Thereafter you can run `fin gulp` to watch for changes for Sass and JS which 
+in turn will compile the CSS. Sass and JS sources are in the `./src` folder 
+and compiled assets land in the `./dist` folder. You'll always want to use 
+Fin's version of gulp rather than a local version and `fin init-theme` takes
+care of that and sets the correct version.
 
-Note, you can run all these commands from the root of the project as the commands CD into the custom theme folder, `/ucsf8/docroot/sites/dermatology.ucsf.edu/themes/custom/toland`.
+Note, you can run all these commands from the root of the project as the 
+commands CD into the custom theme folder, 
+`/ucsf8/docroot/sites/dermatology.ucsf.edu/themes/custom/toland`.
 
 This theme uses core's *Stable* as a base theme.
 
 ## Sass and CSS
 
-For this project, we are taking a granular approach via individual CSS files being output and then compartmentalized into various libraries loaded from specific templates. This aligns with Drupal core but gives us the ability to boost performance as well.
+For this project, we are taking a granular approach via individual CSS files 
+being output and then compartmentalized into various libraries loaded from 
+specific templates. This aligns with Drupal core but gives us the ability to 
+boost performance as well.
 
 ## Gulp Sass Linting
 
-This project uses Sass linting to help us write better code. When you run `fin gulp`, you will see a list of errors and warnings print out in terminal if there are any issues. An error will stop gulp so you can fix it and a warning will still continue to compile. If you need to adjust the linting settings, you can look in `sass-lint.yml`.
+This project uses Sass linting to help us write better code. When you run 
+`fin gulp`, you will see a list of errors and warnings print out in terminal
+if there are any issues. An error will stop gulp so you can fix it and a 
+warning will still continue to compile. If you need to adjust the linting 
+settings, you can look in `sass-lint.yml`.
 
 ## Gulp Sass JS transpiling using Babel
 
-This project converts any ES6 / 2015 code to ES5 in the `dist` folder so that Internet Explorer 11 can understand it. Your modern JS stays intact in the `src` folder.
+This project converts any ES6 / 2015 code to ES5 in the `dist` folder so that 
+Internet Explorer 11 can understand it. Your modern JS stays intact in the
+`src` folder.
 
 ### Mixins
 
-There are a whole host of mixins that can be utilized located in the `abstract` folder, `./scss/abstract/...`. Be sure to review these file for existing mixins that will come in handy for theming.
+There are a whole host of mixins that can be utilized located in the `abstract` 
+folder, `./scss/abstract/...`. Be sure to review these file for existing mixins
+that will come in handy for theming.
 
 ### Extends
 
-Use Sass extends sparingly only to extend page headings (`h1-h6` tags). Ideally, just for headings when you need to change a heading's font size but it might not be ideal to change the heading tag itself because of accessibility.
+Use Sass extends sparingly only to extend page headings (`h1-h6` tags).
+Ideally, just for headings when you need to change a heading's font size
+but it might not be ideal to change the heading tag itself because of 
+accessibility.
 
-For example, you have an h2 that follows and h1 tag but the h2 needs to be sized like an h3. Note, when extending a heading, use its class, `@extend .h3;` rather than `@extend h3;`
+For example, you have an h2 that follows and h1 tag but the h2 needs to be
+sized like an h3. Note, when extending a heading, use its class,
+`@extend .h3;` rather than `@extend h3;`
 
 ```sass
 .page-title__lede h2 {
@@ -62,7 +86,8 @@ For example, you have an h2 that follows and h1 tag but the h2 needs to be sized
 
 ### Units
 
-For font sizes use the rem mixin. e.g. `@include rem(font-size, 48px);` which compiles as `font-size: 3rem;`. For anything else, use pixels.
+For font sizes use the rem mixin. e.g. `@include rem(font-size, 48px);` which 
+compiles as `font-size: 3rem;`. For anything else, use pixels.
 
 ### Utility classes
 
@@ -97,7 +122,7 @@ There are a number of utility classes.
 @include icon-before(icon-letters, 35px, 35px, $position: absolute);
 ```
 
-- If you add new icons to `./icon/raw` you can then run `fin gulp svg` to regenerate the HTML preview page.
+- If you add new icons to `./icon/raw` run `fin gulp svg` to regenerate HTML.
 
 ### Gulp functions via fin
 
