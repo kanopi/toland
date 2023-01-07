@@ -20,8 +20,10 @@ function toland_preprocess_block(&$vars) {
   // toland_theme_suggestions_menu_alter.
   if (isset($vars['elements']['#id'])) {
     $block = Block::load($vars['elements']['#id']);
-    $region = $block->getRegion();
-    $vars['content']['#attributes']['region'] = $region;
+    if (!empty($block)) {
+      $region = $block->getRegion();
+      $vars['content']['#attributes']['region'] = $region;
+    }
   }
 }
 
