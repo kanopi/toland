@@ -11,6 +11,7 @@ const sass = require('gulp-sass')(require('sass')),
   concat = require('gulp-concat'),
   babel = require('gulp-babel'),
   sasslint = require('gulp-sass-lint'),
+  clean = require('gulp-clean'),
   csscomb = require('gulp-csscomb');
 
 const styles = () => {
@@ -67,11 +68,12 @@ const copy_svg = () => {
 };
 exports.copy_svg = copy_svg;
 
+
 // svgSprite function.
 const sprites = (done) => {
   // Basic configuration example.
   var config = {
-    // log: 'debug',
+    log: 'debug',
     shape: {
       dimension: { // Set maximum dimensions.
         maxWidth: 110,
@@ -85,27 +87,28 @@ const sprites = (done) => {
       view: {
         bust: false,
         common: 'ico',
+        dest: './dist/icon/',
         example: {
-          dest: '../dist/icon/icons.html'
+          dest: './icons.html'
         },
         prefix: '.',
         render: {
           scss: {
             template: './src/icon/svg-sprite-template.scss',
-            dest: '../src/scss/_icons.scss'
+            dest: '../../src/scss/_icons.scss'
           }
         },
-        sprite: '../src/icon/icons.svg',
+        sprite: 'icons.svg',
       }
     }
   };
 
-  gulp.src('**/*.svg', {cwd: './src/icon/raw'})
+  gulp.src('./src/icon/raw/*.svg')
     .pipe(svgSprite(config))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'));  
   done();
 };
-exports.svgSprite = sprites;
+exports.svgConcat = sprites;
 
 // JS.
 const scripts = () => {
@@ -138,14 +141,16 @@ exports.concat = concater;
   // Notify gulp that this task is done.
 //  gulpCallback();
 //});
-const doWatch = () => {
-  watch(["./src/scss/**/*.scss", "./src/js/**/*.js"], () => { series(scripts, styles) })
+const doWatch = () => {  
+  watch("./src/scss/**/*.scss", styles)
+  watch("./src/js/**/*.js", scripts);
+  watch(["./src/icon/raw/*.svg", "./src/icon/svg-sprite-template.scss"], series(sprites, copy_svg));
 }
 exports.watch = doWatch;
 
-exports.build = series(styles, scripts);
+exports.build = series(sprites, styles, scripts, concater, copy_svg);
 // Task: handle svgs.
-exports.svg = series(svgSprite, copy_svg);
+exports.svg = series(sprites, copy_svg);
 // Task: Default gulp build and watch.
 exports.default = series(styles, scripts);
 // Concat CSS for ckeditor.
