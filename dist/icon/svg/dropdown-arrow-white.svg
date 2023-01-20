@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="38px" height="23px" viewBox="0 0 38 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Path</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="dropdown-arrow" fill="#FFFFFF" fill-rule="nonzero">
-            <polygon id="Path" transform="translate(19.000000, 11.500000) rotate(-90.000000) translate(-19.000000, -11.500000) " points="26.5093333 -7 8 11.5 26.5093333 30 30 26.5109 14.9813333 11.5 30 -3.5109"></polygon>
-        </g>
-    </g>
-</svg>
