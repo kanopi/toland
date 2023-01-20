@@ -73,7 +73,7 @@ exports.copy_svg = copy_svg;
 const sprites = (done) => {
   // Basic configuration example.
   var config = {
-    log: 'debug',
+    //log: 'debug',
     shape: {
       dimension: { // Set maximum dimensions.
         maxWidth: 110,
