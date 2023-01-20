@@ -6,7 +6,7 @@ Accordion styling.
 .c-accordion {
 
   .page-is-fullwidth & {
-    @include container(1270px);
+    @include container(1270px);   
   }
 
   &__main-title {

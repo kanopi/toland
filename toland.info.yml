@@ -10,6 +10,7 @@ dependencies:
   - responsive_image:responsive_image
   - easy_breadcrumb:easy_breadcrumb
   - block_class:block_class
+  - twig_field_value:twig_field_value
 
 libraries:
   - toland/global

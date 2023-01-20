@@ -130,7 +130,7 @@ There are a number of utility classes.
 - `fin gulp` - (default) watches for JS and Sass changes, compiles the CSS.
   Live injects new css if you have BrowserSync enabled. See "BrowserSync
   and live CSS injection" below for more information.
-- `fin gulp build` - Compiles the CSS
+- `fin gulp build` - Compiles all the things
 - `fin gulp svg` - Builds icon preview page and copies icons to the `dist`
   folder. You can preview the icons at [http://local.dermatology.ucsf.edu/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/icons.html](http://local.dermatology.ucsf.edu/sites/dermatology.ucsf.edu/themes/custom/toland/dist/icon/icons.html)
 - `fin gulp combine` - combines any css in `/dist/css/global` for use in
