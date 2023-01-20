@@ -142,9 +142,9 @@ exports.concat = concater;
 //  gulpCallback();
 //});
 const doWatch = () => {  
-  watch("./src/scss/**/*.scss", styles)
-  watch("./src/js/**/*.js", scripts);
-  watch(["./src/icon/raw/*.svg", "./src/icon/svg-sprite-template.scss"], series(sprites, copy_svg));
+  watch("./src/scss/**/*.scss", {usePolling: true}, styles)
+  watch("./src/js/**/*.js", {usePolling: true}, scripts);
+  watch(["./src/icon/raw/*.svg", "./src/icon/svg-sprite-template.scss"], {usePolling: true}, series(sprites, copy_svg));
 }
 exports.watch = doWatch;
 
