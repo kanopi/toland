@@ -22,15 +22,3 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      article: article
-      condition: condition
-      kanopi_ucsf_person: kanopi_ucsf_person
-      service: service
-      surgery: surgery
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
