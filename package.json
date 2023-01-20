@@ -1,7 +1,10 @@
 {
   "name": "toland_theme",
   "version": "1.0.0",
-  "description": "Gulp dependencies for the Toland theme",
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "Starter theme for UCSF",
   "main": "gulpfile.js",
   "license": "MIT",
   "repository": {
@@ -10,7 +13,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp:build": "./node_modules/.bin/gulp"
+    "gulp:build": "./node_modules/.bin/gulp build"
   },
   "dependencies": {
     "@babel/core": "^7.1.5",
