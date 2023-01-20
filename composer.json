@@ -1,6 +1,6 @@
 {
     "name": "kanopi/toland",
-    "description": "Starter theme",
-    "type": "drupal-custom-theme",
+    "description": "UCSF Starter theme",
+    "type": "drupal-theme",
     "require": {}
 }
