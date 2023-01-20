@@ -152,6 +152,6 @@ exports.build = series(sprites, styles, scripts, concater, copy_svg);
 // Task: handle svgs.
 exports.svg = series(sprites, copy_svg);
 // Task: Default gulp build and watch.
-exports.default = series(styles, scripts);
+exports.default = series(sprites, styles, scripts, concater, copy_svg);
 // Concat CSS for ckeditor.
 exports.combine = concat;
